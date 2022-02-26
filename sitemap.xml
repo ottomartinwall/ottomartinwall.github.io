@@ -6,17 +6,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://GITHUB_USERNAME.github.io/gymnasiet/svenska_2/proj_1/</loc>
-         <lastmod>2022-02-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://GITHUB_USERNAME.github.io/university/linear_algebra/lectures/lec_1/</loc>
-         <lastmod>2022-02-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://GITHUB_USERNAME.github.io/university/linear_algebra/linear_algebra_done_right/cha_1/</loc>
+         <loc>https://GITHUB_USERNAME.github.io/latex/university/linearAlgebra/markdown/</loc>
          <lastmod>2022-02-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
