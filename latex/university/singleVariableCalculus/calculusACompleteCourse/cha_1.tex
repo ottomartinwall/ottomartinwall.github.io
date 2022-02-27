@@ -1,14 +1,62 @@
-\subsection{First Chapter Example}
+\subsection{Limits and Continuity}
 
-For proofs, we're going to use a more general field $ \mathbb{F} $ to prove our theorems, so that our our proofs also apply to the fields $ \mathbb{R} $ and $ \mathbb{C} $. 
+\begin{theo}[The Squeeze Theorem]
+	Suppose that $f(x) \leq g(x) \leq h(x)$ holds for all $x$ in some open interval containing $c$, except possibly at $x=c$. Suppose also that
+	
+	\begin{align*}
+		\lim_{x \rightarrow c} f(x) = \lim_{x \rightarrow c} h(x) = L
+	\end{align*}
+	
+	Then $\lim_{x \rightarrow c} g(x) = L $.
+\end{theo}
 
-\begin{definition}
-	$ \mathbb{F}^n $ is the set of all lists of length $ n $ of elements of $ \mathbb{F} $.
-	\[
-		\mathbb{F}^n = \{ \left( x_1, \dots, x_n \right) \; | \; x_j \in \mathbb{F} \; \forall j = 1, \dots, n \}
-	\]
-	For $ (x_1, \dots, x_n) \in \mathbb{F} $ and $ j \in \{ 1, \dots, n \} $, we say that $ x_j $ is the $ j^{th} $ \textbf{coordinate} of $ (x_1, \dots, x_n) $. $ (x_1, \dots, x_n) $ are scalars, a.k.a. numbers.
-\end{definition}
+\begin{proof}
+	For this proof, the $(\epsilon, \delta)$-definition of the limit will be used.
+	
+	The goal is to prove that $\lim_{x \rightarrow c} g(x) = L$, which is true if
+	
+	\begin{align*}
+		\forall \epsilon > 0, \exists \delta > 0 : \forall x, (|x-a| < \delta \Rightarrow |g(x)-L| < \epsilon).
+	\end{align*}
+	
+	Since $\lim_{x \rightarrow c} f(x) = L$,
+	
+	\begin{align}
+		\forall \epsilon > 0, \exists \delta_1 > 0 : \forall x, (|x-a| < \delta_1 \Rightarrow |f(x)-L| < \epsilon)
+	\end{align}
+	
+	And since $\lim_{x \rightarrow c} h(x) = L$,
+	
+	\begin{align}
+		\forall \epsilon > 0, \exists \delta_2 > 0 : \forall x, (|x-a| < \delta_2 \Rightarrow |h(x)-L| < \epsilon).
+	\end{align}
+	
+	Then we have 
+	
+	\begin{align*}
+		&f(x) \leq g(x) \leq h(x) \\
+		&f(x)-L \leq g(x)-L \leq h(x)-L
+	\end{align*}
+	
+	We can choose $\delta = \min\{\delta_1, \delta_2\}$, then if $|x-a| < \delta$, and combining (1) and (2), we have
+	
+	\begin{align*}
+		&-\epsilon < f(x)-L \leq g(x)-L \leq h(x)-L < \epsilon \\
+		&-\epsilon < g(x)-L < \epsilon \\
+		&|g(x)-L| < \epsilon
+	\end{align*}
+	
+	So $\lim_{x \rightarrow c} g(x) = L$, which completes the proof.
+\end{proof}
 
-This means that if we say $ \mathbb{F} = \mathbb{R} $ then we can apply the theorems in the real $ n $-space.
+\subsubsection{Exercises 1.1}
+\subsubsection{Exercises 1.2}
+
+
+
+
+
+
+
+
 
