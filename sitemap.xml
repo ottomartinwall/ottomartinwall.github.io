@@ -6,7 +6,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://GITHUB_USERNAME.github.io/latex/gymnasiet/exampleSubject/markdown/</loc>
+         <lastmod>2022-02-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://GITHUB_USERNAME.github.io/latex/gymnasiet/matteFo%CC%88rklaringar/markdown/</loc>
+         <lastmod>2022-02-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://GITHUB_USERNAME.github.io/latex/gymnasiet/svenska/markdown/</loc>
+         <lastmod>2022-02-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://GITHUB_USERNAME.github.io/latex/university/exampleSubject/markdown/</loc>
          <lastmod>2022-02-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
