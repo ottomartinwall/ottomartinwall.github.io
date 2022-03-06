@@ -16,19 +16,19 @@
 	The goal is to prove that $\lim_{x \rightarrow c} g(x) = L$, which is true if
 	
 	\begin{align*}
-		\forall \epsilon > 0, \exists \delta > 0 : \forall x, (|x-a| < \delta \Rightarrow |g(x)-L| < \epsilon).
+		\forall \epsilon > 0, \exists \delta > 0 : \forall x, (|x-c| < \delta \Rightarrow |g(x)-L| < \epsilon).
 	\end{align*}
 	
 	Since $\lim_{x \rightarrow c} f(x) = L$,
 	
 	\begin{align}
-		\forall \epsilon > 0, \exists \delta_1 > 0 : \forall x, (|x-a| < \delta_1 \Rightarrow |f(x)-L| < \epsilon)
+		\forall \epsilon > 0, \exists \delta_1 > 0 : \forall x, (|x-c| < \delta_1 \Rightarrow |f(x)-L| < \epsilon)
 	\end{align}
 	
 	And since $\lim_{x \rightarrow c} h(x) = L$,
 	
 	\begin{align}
-		\forall \epsilon > 0, \exists \delta_2 > 0 : \forall x, (|x-a| < \delta_2 \Rightarrow |h(x)-L| < \epsilon).
+		\forall \epsilon > 0, \exists \delta_2 > 0 : \forall x, (|x-c| < \delta_2 \Rightarrow |h(x)-L| < \epsilon).
 	\end{align}
 	
 	Then we have 
@@ -38,7 +38,7 @@
 		&f(x)-L \leq g(x)-L \leq h(x)-L
 	\end{align*}
 	
-	We can choose $\delta = \min\{\delta_1, \delta_2\}$, then if $|x-a| < \delta$, and combining (1) and (2), we have
+	We can choose $\delta = \min\{\delta_1, \delta_2\}$, then if $|x-c| < \delta$, and combining (1) and (2), we have
 	
 	\begin{align*}
 		&-\epsilon < f(x)-L \leq g(x)-L \leq h(x)-L < \epsilon \\
