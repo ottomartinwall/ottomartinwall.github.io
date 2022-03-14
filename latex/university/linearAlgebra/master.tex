@@ -8,8 +8,10 @@
 \tableofcontents
 \newpage
 
-\newtheorem{definition}{Definition}
-\newtheorem{theorem}{Theorem}
+\mdfsetup{innertopmargin = 0.5cm, innerbottommargin = 0.5cm}
+\newmdtheoremenv{definition}{Definition}
+\newmdtheoremenv{theorem}{Theorem}
+\newmdtheoremenv{exercise}{Exercise}
 
 \section{Linear Algebra Done Right}
 \include{linearAlgebraDoneRight/cha_1}
