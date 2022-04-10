@@ -1,9 +1,24 @@
 \subsection{Instuderingsfrågor}
 
 \paragraph{1. Vad är routing?/Hur går det till?}
+Routing är vad datorer använder för att skicka och ta emot information av varann. \textit{Routinglistor/tabeller} och \textit{Default Gateway} används inom denna process. Processen ser ungefär ut såhär när en dator försöker kommunicera med en annan:
+\begin{enumerate}
+	\item Hosten kontrollerar först om paketet ska till en adress på det lokala nätverket eller inte.
+	\item Om paketet ska till en lokal adress så skickas det dit, men annars skickas det till den angivna \textit{Default Gateway} (\textit{routern})
+	\item Routern kontrollerar om adressen och vägen dit (\textit{route}) finns i sin \textit{routinglista} i sitt minne, och om den finns så skickas paketet dit.
+	\item Om \textit{routen} inte hittas så skickas paketet till routerns \textit{default gateway}, som då är en annan router.
+	\item Nu upprepas steg 3 och 4 tills paketet har nått till mottagaren.
+\end{enumerate}
+
 \paragraph{2. Vad är en nätmask?/Förklara varför det används}
+En nätmask används för att ange vilka bytes i en \textit{IP adress} som ägnas åt \textit{Nät-ID} respektive \textit{Dator-ID}, så att datorn kan läsa av adressen rätt.
+
 \paragraph{3. Vad är subnetting?/Förklara varför det används}
+Tanken var ursprungligen att varje enhet skulle ha en egen fast \textit{IP-adress} i standarden \textit{IPv4}. Detta blev snabbt orimligt i och med internets expansion. Klass A var till för företag/organisationer och kunde ha 16 miljoner enheter under samma subnät men det kunde endast finnas 126 sådana i världen. Idag så används istället \textit{lokala IP-adresser} i ett nätverk, som sedan går mot en router som översätter de lokala adresserna till en gemensam adress som används för att kommunicera med resten av internet. Detta kommer tillslut inte heller att räcka, men det finns en standard vid namn \textit{IPv6} som vi sakta byter till som har \textbf{\textit{många}} fler möjliga adresser. Subnät används idag inom ett lokalt nätverk för att t.ex kategorisera in olika divisioner inom ett företag.
+
 \paragraph{4. Vilka tre typer av routeanslutingar finns det?}
+ 
+
 \paragraph{5. Nämn vilka sex routetyper det finns (6 st)}
 \paragraph{6. Joakim ska skicka en fil till en kollega.(Samma nätverk) Hur går processen till? [E-A]}
 \paragraph{7. Företaget du arbetar på använder mer enheter än vad deras klass C nätverk kan tilldela. Varför kan inte nätverket tilldela fler enheter och hur gör du för att lösa problemet?}
