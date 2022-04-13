@@ -21,5 +21,66 @@ Tanken var ursprungligen att varje enhet skulle ha en egen fast \textit{IP-adres
 
 \paragraph{5. Nämn vilka sex routetyper det finns (6 st)}
 \paragraph{6. Joakim ska skicka en fil till en kollega.(Samma nätverk) Hur går processen till? [E-A]}
+
+Enligt sättet som beskrivs i fråga 1, så kan vi gå igenom stegen.
+
+\begin{enumerate}
+	\item Hosten kontrollerar om paketet ska skickas till en ip-adress på det lokala nätverket.
+	\item Om det ska det, så skickas den dit.
+\end{enumerate}
+
+Filen kommer att skickas med hjälp av FTP eller SFTP.
+
 \paragraph{7. Företaget du arbetar på använder mer enheter än vad deras klass C nätverk kan tilldela. Varför kan inte nätverket tilldela fler enheter och hur gör du för att lösa problemet?}
+
+De kan byta till klass A. Då vi idag ändå använder lokala nätverk med routers ut mot resten av internet, så kan vi använda Klass A utan problem. Troligtvis har inte företaget mer än 126 lokala nätverk som de vill ha innanför samma yttre router, men om de har det så kan de även ta Klass B.
+
+En alternativ lösning är att skapa fler subnät.
+
+Klass C ägnar bara en byte åt dator-IDn, vilket resulterar att 128 finns, och 2 går åt annat så 126 är tillgängliga.
+
 \paragraph{8. Förklara vad VPN är, hur det fungerar och varför det är bra att använda VPN både privat och företagsrelaterat.}
+
+\textit{VPN (Virtual Private Network)} förlänger ett privat nätverk, genom att användaren kan koppla mot ett privat nätverk över internet och sedan kommunicera med resten av internet som att användaren befann sig inom det privata nätverket. Kopplingen brukar vara krypterad så att datan inte kan läsas av.
+
+VPNer brukar användas till att t.ex nå nätverkskopplade resurser så som en NAS i hemmet eller kontoret. Det finns även VPN-tjänster så som ExpressVPN, som tillåter dig att koppla mot privata nätverk i olika länder för att ta sig runt \textit{geo-blocking}, vilket i praktik kan tillåta en att se andra serier på Netflix som inte finns i sitt hemland.
+
+Två protokoll som används mycket idag är OpenVPN och Wireguard, varav det andra är nyare, säkrare och snabbare (generellt sett).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
