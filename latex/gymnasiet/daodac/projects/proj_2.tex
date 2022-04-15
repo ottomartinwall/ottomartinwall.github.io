@@ -3,8 +3,8 @@
 \paragraph{1. Vad är routing?/Hur går det till?}
 Routing är vad datorer använder för att skicka och ta emot information av varann. \textit{Routinglistor/tabeller} och \textit{Default Gateway} används inom denna process. Processen ser ungefär ut såhär när en dator försöker kommunicera med en annan:
 \begin{enumerate}
-	\item Hosten kontrollerar först om paketet ska till en adress på det lokala nätverket eller inte.
-	\item Om paketet ska till en lokal adress så skickas det dit, men annars skickas det till den angivna \textit{Default Gateway} (\textit{routern för det lokala nätverket})
+	\item Hosten kontrollerar först om sitt paket ska till en adress på det lokala nätverket eller inte, genom att kolla igenom sin routingtabell.
+	\item Om paketet ska till en lokal adress så skickas det dit, men annars skickas det till den angivna \textit{Default Gateway} (routern för det lokala nätverket)
 	\item Routern tar emot paketet.
 	\item Routern läser av om paketet ska skickas vidare.
 	\item Routern kollar igenom sin \textit{routingtabell} och väljer vilken väg som är bäst.
