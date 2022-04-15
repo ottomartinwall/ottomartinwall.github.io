@@ -4,10 +4,14 @@
 Routing är vad datorer använder för att skicka och ta emot information av varann. \textit{Routinglistor/tabeller} och \textit{Default Gateway} används inom denna process. Processen ser ungefär ut såhär när en dator försöker kommunicera med en annan:
 \begin{enumerate}
 	\item Hosten kontrollerar först om paketet ska till en adress på det lokala nätverket eller inte.
-	\item Om paketet ska till en lokal adress så skickas det dit, men annars skickas det till den angivna \textit{Default Gateway} (\textit{routern})
-	\item Routern kontrollerar om adressen och vägen dit (\textit{route}) finns i sin \textit{routinglista} i sitt minne, och om den finns så skickas paketet dit.
-	\item Om \textit{routen} inte hittas så skickas paketet till routerns \textit{default gateway}, som då är en annan router.
-	\item Nu upprepas steg 3 och 4 tills paketet har nått till mottagaren.
+	\item Om paketet ska till en lokal adress så skickas det dit, men annars skickas det till den angivna \textit{Default Gateway} (\textit{routern för det lokala nätverket})
+	\item Routern tar emot paketet.
+	\item Routern läser av om paketet ska skickas vidare.
+	\item Routern kollar igenom sin \textit{routingtabell} och väljer vilken väg som är bäst.
+	\item Finns det en route så skickas paketet.
+	\item Finns det ingen route så skickas paketet till routerns \textit{Default Gateway}, vilket är en annan router.
+	\item Finns det ingen default gateway så slängs paketet.
+	\item steg 3, 4, 5, 6 och 7 repeteras tills paketet är hos mottagaren eller har slängts.
 \end{enumerate}
 
 \paragraph{2. Vad är en nätmask?/Förklara varför det används}
@@ -29,7 +33,9 @@ Enligt sättet som beskrivs i fråga 1, så kan vi gå igenom stegen.
 	\item Om det ska det, så skickas den dit.
 \end{enumerate}
 
-Filen kommer att skickas med hjälp av FTP eller SFTP.
+Filen kommer att skickas med hjälp av FTP eller SFTP. Filströmmen går igenom en switch som är kopplad mot båda enheterna.
+
+test test test
 
 \paragraph{7. Företaget du arbetar på använder mer enheter än vad deras klass C nätverk kan tilldela. Varför kan inte nätverket tilldela fler enheter och hur gör du för att lösa problemet?}
 
@@ -46,28 +52,6 @@ Klass C ägnar bara en byte åt dator-IDn, vilket resulterar att 128 finns, och 
 VPNer brukar användas till att t.ex nå nätverkskopplade resurser så som en NAS i hemmet eller kontoret. Det finns även VPN-tjänster så som ExpressVPN, som tillåter dig att koppla mot privata nätverk i olika länder för att ta sig runt \textit{geo-blocking}, vilket i praktik kan tillåta en att se andra serier på Netflix som inte finns i sitt hemland.
 
 Två protokoll som används mycket idag är OpenVPN och Wireguard, varav det andra är nyare, säkrare och snabbare (generellt sett).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
