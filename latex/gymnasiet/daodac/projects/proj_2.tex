@@ -21,19 +21,33 @@ En nätmask används för att ange vilka bytes i en \textit{IP adress} som ägna
 Tanken var ursprungligen att varje enhet skulle ha en egen fast \textit{IP-adress} i standarden \textit{IPv4}. Detta blev snabbt orimligt i och med internets expansion. Klass A var till för företag/organisationer och kunde ha 16 miljoner enheter under samma subnät men det kunde endast finnas 126 sådana i världen. Idag så används istället \textit{lokala IP-adresser} i ett nätverk, som sedan går mot en router som översätter de lokala adresserna till en gemensam adress som används för att kommunicera med resten av internet. Detta kommer tillslut inte heller att räcka, men det finns en standard vid namn \textit{IPv6} som vi sakta byter till som har \textbf{\textit{många}} fler möjliga adresser. Subnät används idag inom ett lokalt nätverk för att t.ex kategorisera in olika divisioner inom ett företag.
 
 \paragraph{4. Vilka tre typer av routeanslutingar finns det?}
- 
 
+\begin{itemize}
+	\item \textbf{\textit{Static Route}:} En statisk route skapas utav en administratör, och ändras alltså inte.
+	\item \textbf{\textit{Dynamic Route}:} En dynamisk route väljs i stunden av en router utefter den route som bedöms vara  bäst. Denna ändras alltså väldigt ofta.
+	\item \textbf{\textit{Direct Connect}:} Denna typ av route tar bara ett steg, det är en direktlänk. Den är snabbast men är inte ekonomiskt fördelaktig på en stor skala.
+\end{itemize}
+ 
 \paragraph{5. Nämn vilka sex routetyper det finns (6 st)}
+
+\begin{itemize}
+	\item \textbf{\textit{Default Route}:} Detta är samma sak som \textit{Default Gateway}, förutom att det inte måste vara till en router. \textit{"Gateway"} brukar syfta på en väg ut från ett lokalt nätverk till ett annat nätverk, eller en väg från ett nätverk till ett annat.
+	\item \textbf{\textit{Subnet}:} Ett \textit{subnät} är en part av ett större nätverk. Det kan t.ex finnas olika subnät för olika divisioner i ett företag, som ändå tillsammans har en gemensam yttre ip-adress.
+	\item \textbf{\textit{Supernet}:} Detta är motsatsen utav \textit{subnet}, ett \textit{supernet} är en sammansättning av flera nätverk eller subnätverk. 
+	\item \textbf{\textit{Host Routing}:} Detta är processen då en \textit{host} skickar ett paket till en annan \textit{host}
+\end{itemize}
+
+
 \paragraph{6. Joakim ska skicka en fil till en kollega.(Samma nätverk) Hur går processen till? [E-A]}
 
 Enligt sättet som beskrivs i fråga 1, så kan vi gå igenom stegen.
 
 \begin{enumerate}
-	\item Hosten kontrollerar om paketet ska skickas till en ip-adress på det lokala nätverket.
-	\item Om det ska det, så skickas den dit.
+	\item Hosten kontrollerar om paketet ska skickas till en ip-adress på det lokala nätverket, genom att kolla igenom sin \textit{routingtabell}.
+	\item Då den ska det, så skickas paketet dit enligt routen.
 \end{enumerate}
 
-Filen kommer att skickas med hjälp av FTP eller SFTP. Filströmmen går igenom en switch som är kopplad mot båda enheterna.
+Filen kommer att skickas med hjälp av FTP eller SFTP. Filströmmen går igenom en switch som är kopplad mot båda enheterna. Om switchen ännu inte vet vilken ip-adress som är för vilken mac-adress för alla kopplade enheter så checkar den först med alla enheter för att se vilken som är rätt.
 
 \paragraph{7. Företaget du arbetar på använder mer enheter än vad deras klass C nätverk kan tilldela. Varför kan inte nätverket tilldela fler enheter och hur gör du för att lösa problemet?}
 
