@@ -2,10 +2,11 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{amssymb, amsmath, amsthm, mathtools, systeme, parskip, graphicx, multirow, xifthen, mdframed}
+\usepackage{amssymb, amsmath, amsthm, mathtools, systeme, parskip, graphicx, multirow, xifthen, mdframed, setspace}
 \usepackage[margin=1cm, a5paper, top=20mm, headheight=110pt, voffset=0pt, footskip=14.5pt]{geometry}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\jot}{15pt}
+\onehalfspacing
 
 \makeatother
 \def\@lecture{}%
@@ -19,6 +20,13 @@
     \def\date{#2}%
 }
 \makeatletter
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
 
 \makeatother
 \usepackage{fancyhdr}

@@ -1,6 +1,6 @@
 \subsection{Limits and Continuity}
 
-\begin{theorem}[The Squeeze Theorem]
+\begin{theorem}[The Squeeze Theorem, 4]
 	Suppose that $f(x) \leq g(x) \leq h(x)$ holds for all $x$ in some open interval containing $c$, except possibly at $x=c$. Suppose also that
 	
 	\begin{align*}
@@ -52,6 +52,24 @@
 
 \subsubsection{Exercises 1.1}
 \subsubsection{Exercises 1.2}
+
+\paragraph{78. What is the domain of $\sin \frac{1}{x}$ ? Evaluate $\lim_{x\rightarrow 0} x\sin \frac{1}{x}$.}
+
+The domain of $x\sin x$ is $\mathbb{R}$. The domain of $\frac{1}{x}$ is $(-\infty, 0)\cup(0, \infty)$. Therefore, the domain of $x\sin \frac{1}{x}$ is $(-\infty, 0)\cup(0, \infty)$.
+
+To evaluate $\lim_{x\rightarrow 0} x\sin \frac{1}{x}$, we can first evaluate $\lim_{x\rightarrow 0} \frac{1}{x}$. 
+
+$\lim_{x\rightarrow 0^+} \frac{1}{x} = +\infty$, $\lim_{x\rightarrow 0^-} \frac{1}{x} = -\infty$. 
+
+This means that $\lim_{x\rightarrow 0} \sin \frac{1}{x} = \lim_{x\rightarrow \pm\infty} \sin x$, which means that $-1 \leq \lim_{x\rightarrow 0} \sin \frac{1}{x} \leq 1$.
+
+$\lim_{x\rightarrow 0} x\sin \frac{1}{x} = (\lim_{x\rightarrow 0} x)(\lim_{x\rightarrow 0} \sin \frac{1}{x}) = 0$ 
+
+\paragraph{79. Suppose $|f(x)| \leq g(x) \forall x$. What can you conclude about $\lim_{x\rightarrow a} f(x)$ if $\lim_{x\rightarrow a} g(x) = 0$ ? What if $\lim_{x\rightarrow a} g(x) = 3$ ?}
+
+$|f(x)| \leq g(x) \forall x \Leftrightarrow -g(x) \leq f(x) \leq g(x) \forall x$. Since $\lim_{x\rightarrow a} g(x) = 0$ and therefore $\lim_{x\rightarrow a} -g(x) = 0$, then $\lim_{x\rightarrow a} f(x) = 0$ by the squeeze theorem.
+
+If $\lim_{x\rightarrow a} g(x) = 3$, and $-g(x) \leq f(x) \leq g(x) \forall x$, then we can conclude that either $-3 \leq \lim_{x\rightarrow a} f(x) \leq 3$, or $\lim_{x\rightarrow a} f(x)$ doesn't exist.
 
 
 
