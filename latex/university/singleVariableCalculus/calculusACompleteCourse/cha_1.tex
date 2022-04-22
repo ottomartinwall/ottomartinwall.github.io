@@ -118,10 +118,42 @@ Since $L \neq M$, we can let $\epsilon = |L-M|/4$ because $|L-M|$ is positive.
 
 This means that $|L-M| \leq 2\epsilon = |L-M|/2 \Rightarrow 2 \leq 1$, which is obviously false. Therefore $L = M$ and the limit is unique, which was to be shown.
 
+\newpage
+\paragraph{32.}
 
+Since $\lim_{x\rightarrow a} g(x) = M$,
 
+$\forall \epsilon > 0, \exists \delta > 0 : \forall x, 0<|x-a|<\delta \Rightarrow |g(x)-M|=|g(x)+(-M)| \leq |g(x)|+|(-M)|<\epsilon \Leftrightarrow |g(x)| < \epsilon - |M|$
 
+Since we're supposed to show that there exists some $\delta > 0$ which implies that $|g(x)| < 1 + |M|$, we can just choose $\epsilon = 1 + 2|M|$ so that $\epsilon - |M| = 1 + |M|$. This results in that
 
+$0<|x-a|<\delta \Rightarrow |g(x)| < 1 + |M|$
+
+Which was to be shown.
+
+\paragraph{33.}
+
+$\lim_{x\rightarrow a} f(x) \Leftrightarrow (\forall \epsilon > 0, \exists \delta_1 > 0 : \forall x, (0<|x-a|<\delta_1 \Rightarrow |f(x)-L|<\epsilon))$
+
+And
+
+$\lim_{x\rightarrow a} g(x) \Leftrightarrow (\forall \epsilon > 0, \exists \delta_2 > 0 : \forall x, (0<|x-a|<\delta_2 \Rightarrow |g(x)-M|<\epsilon))$
+
+Lets assume that $\lim_{x\rightarrow a} f(x)g(x) \neq LM$.
+
+Let $\delta = \min\{\delta_1, \delta_2\}$. This would result in that
+
+\begin{align}
+	\forall \epsilon > 0, \exists \delta > 0 : \forall x, (0<|x-a|<\delta \Rightarrow |f(x)-L| + |g(x)-M| < 2\epsilon)
+\end{align}
+
+$|f(x)-L| + |g(x)-M| \geq |g(x)||f(x)-L| + |L||g(x)-M| = |g(x)(f(x)-L)| + |L(g(x)-M)| \geq |g(x)(f(x)-L) + L(g(x)-M)| = |f(x)g(x) - Lg(x)+Lg(x) - LM| = |(f(x)g(x)) - (LM)|$
+
+This together with (3) means that
+
+$\forall \epsilon > 0, \exists \delta > 0 : \forall x, (0<|x-a|<\delta \Rightarrow |(f(x)g(x)) - (LM)| < 2\epsilon)$
+
+Which shows that $\lim_{x\rightarrow a} f(x)g(x) = LM$.
 
 
 
