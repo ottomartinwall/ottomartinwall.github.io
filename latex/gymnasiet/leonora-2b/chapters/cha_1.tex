@@ -29,8 +29,8 @@ Ett exempel är
 \begin{align*}
 	6\div 2(1+2) = \\
 	6\div 2(3) = \\
-	6\div 2 \times 3 = \\
-	3 \times 3 = \\
+	6\div 2 \cdot 3 = \\
+	3 \cdot 3 = \\
 	9
 \end{align*}
 
@@ -45,7 +45,7 @@ Lättaste metoden för addition av bråk är att skriva om bråken så att de f�
 
 \begin{align}
 	\frac{1}{3} + \frac{3}{4} = \\
-	\frac{1\times 4}{3\times 4} + \frac{3\times 3}{4\times 3} = \\
+	\frac{1\cdot 4}{3\cdot 4} + \frac{3\cdot 3}{4\cdot 3} = \\
 	\frac{4}{12} + \frac{9}{12} = \\
 	\frac{13}{12}
 \end{align}
@@ -69,7 +69,7 @@ Division är en typ av multiplikation, vilket gör denna ganska enkel men aninge
 
 \begin{align}
 	\frac{a}{b} \div\frac{c}{d} = \\ 
-	\frac{a}{b} \times \frac{d}{c} = \\
+	\frac{a}{b} \cdot \frac{d}{c} = \\
 	\frac{ad}{bc}
 \end{align}
 
@@ -77,11 +77,12 @@ Det andra bråket vänder alltså bara på sig vid utbytet av divisionstecken mo
 
 \newpage
 \subsection{Potenser}
+\label{Potenser}
 
 Potenser kan ses som repeterad multiplikation i vissa fall\footnote{andra definitioner krävs för att inkludera alla reella eller till och med komplexa exponenter. Det kommer konstigt nog först i universitetsmatten.}. Alltså att om $n$ är ett positivt heltal så gäller detta:
 
 \begin{align}
-	a^n = a_1 \times a_2 \times ... \times a_n
+	a^n = a_1 \cdot a_2 \cdot ... \cdot a_n
 \end{align}
 
 Här är några potensregler som gäller för alla tal:
@@ -105,15 +106,15 @@ Här är några potensregler som gäller för alla tal:
 
 En ekvation är ett typ av påstående, som innehåller en eller fler variabler (okända). Jag kan påstå att $3x+2 = 8$ utan att säga vad $x$ är. Just detta är endast sant om $x=2$.
 
-Ekvationer brukar kräva att man löser ut en variabel i slutändan. Metoden jag brukar ha är att först och efter varje steg se om jag kan förenkla ekvationen genom addition/subtraktion, sedan om det går genom multiplikation/division, och till sist om det går genom potenser.
+Ekvationer brukar kräva att man löser ut enskilda variabler i slutändan. Metoden jag brukar ha är att först och efter varje steg se om jag kan förenkla ekvationen genom addition/subtraktion, sedan om det går genom multiplikation/division, och till sist om det går genom potenser.
 
-Detta är ett exempel:
+\paragraph{Exempel 1}
 
 \begin{align}
 	\frac{x}{x+10} = \frac{24}{54}
 \end{align}
 
-Först så letar jag då om jag kan göra något med addition/subtraktion, vilket inte hjälper här. Nästa möjlighet är om multiplikation/division kan förenkla något här, vilket det kan genom multiplikation av $x+10$ på båda sidor\footnote{Detta förenklar då multiplikation är lättare att hantera än division, så vi vill få bort divisionstecken.}
+Först så letar jag om jag kan göra något med addition/subtraktion, vilket inte hjälper här. Nästa möjlighet är om multiplikation/division kan förenkla något, vilket det kan genom multiplikation av $x+10$ på båda sidor\footnote{Detta förenklar då multiplikation är lättare att hantera än division, så vi vill få bort divisionstecken.}
 
 \begin{align}
 	x = \frac{24}{54}(x+10)
@@ -122,7 +123,7 @@ Först så letar jag då om jag kan göra något med addition/subtraktion, vilke
 Nu kollar vi igen. Addition/subtraktion hjälper inget, men multiplikation/division hjälper återigen här. Vi förenklar genom att multiplicera in i parantesen.
 
 \begin{align}
-	x = \frac{24}{54}x + \frac{24}{54} \times 10
+	x = \frac{24}{54}x + \frac{24}{54} \cdot 10
 \end{align}
 
 Återigen så letar vi. Addition/subtraktion verkar hjälpa denna gång då målet är att få x på samma sida av likhetstecknet. Vi subtraherar med $\frac{24}{54}x$. I samma veva kan vi även multiplicera in $10$ i bråket på höger sida.
@@ -164,8 +165,20 @@ $54$ i nämnaren på första bråket och i täljaren på andra bråket tar ut va
 	x = 8
 \end{align}
 
+\paragraph{Exempel 2}
 
+\begin{align}
+	x^{\frac{1}{3}} = 3
+\end{align}
 
+Här så fungerar inte addition/subtraktion, eller multiplikation/division. Nästa sak att checka är alltså potenser. Här så kan vi använda oss av potensreglerna i \ref{Potenser}, där $(a^b)^c = a^{bc}$, för att ändra exponenten hos $x$ från $\frac{1}{3}$ till $1$.
+
+\begin{align}
+	(x^{\frac{1}{3}})^{3} = (3)^3 \\
+	x^{\frac{3}{3}} = 27 \\
+	x^1 = 27 \\
+	x = 27
+\end{align}
 
 
 
