@@ -1,11 +1,224 @@
 \subsection{Negativa tal}
 
+Ett negativt tal är bara den additiva inversen av samma tal. Om $a$ är ett reellt tal och $-a$ är dess additiva invers, så är $a+(-a)=0$. Ett sätt att se på det är att den additiva inversen (negativa varianten) av ett tal är lika långt från $0$ på tallinjen, men åt andra hållet. 
+
+Multiplikation får några egenskaper utav detta, som att negativt gånger negativt blir positivt. Att vända dig om och sedan backa blir detsamma som att bara gå rakt fram från början.
+
+Några regler kring detta är då:
+
+\begin{align}
+	(-a)(-b) = ab \\
+	(-a)b = -ab \\
+	a(-b) = (-a)b \\
+	\frac{(-a)}{b} = \frac{a}{(-b)}
+\end{align}
+
+\newpage
 \subsection{Prioriteringsregler}
 
+Prioriteringsregler har vi, då att om vi fick välja helt fritt så skulle alla få olika svar. Ordningen är såhär:
+
+\begin{enumerate}
+	\item Paranteser
+	\item Multiplikation/Division (Om båda är efter varann, gå från vänster till höger)
+	\item Addition/Subtraktion (Om båda är efter varann, gå från vänster till höger)
+\end{enumerate}
+
+Ett exempel är 
+
+\begin{align*}
+	6\div 2(1+2) = \\
+	6\div 2(3) = \\
+	6\div 2 \times 3 = \\
+	3 \times 3 = \\
+	9
+\end{align*}
+
+\newpage
 \subsection{Bråk}
 
+Bråk är tal som representeras som kan skrivas som en kvot\footnote{resultatet av en division} av två heltal. Det kan t.ex vara $\frac{3}{7}$, vilket kan tänkas som  \textit{tre sjundedelar}.
+
+\subsubsection{Addition av bråk}
+\label{Addition av bråk}
+Lättaste metoden för addition av bråk är att skriva om bråken så att de får samma nämnare\footnote{nedre parten hos ett bråk}:
+
+\begin{align}
+	\frac{1}{3} + \frac{3}{4} = \\
+	\frac{1\times 4}{3\times 4} + \frac{3\times 3}{4\times 3} = \\
+	\frac{4}{12} + \frac{9}{12} = \\
+	\frac{13}{12}
+\end{align}
+
+Metoden jag brukar använda för att skriva om bråken, är att multiplicera täljaren och nämnaren på det ena bråket, med nämnaren på det andra, och tvärt om. I exemplet ovan så har ena bråket nämnaren 3, så jag multiplicerar täljaren och nämnaren med just 3 på det andra bråket, och tvärt om med talet 4 på det förstnämnda bråket. Genom denna metod får bråken samma nämnare då $ab = ba$, som ses i nämnarna på rad (6) till (7). Efter det så kan man addera täljarna på bråken.
+
+Addition och subtraktion fungerar likadant här.
+
+\subsubsection{Multiplikation av bråk}
+
+Multiplikation av bråk är mycket enkelt.
+
+\begin{align}
+	\frac{a}{b} \frac{c}{d} = \frac{ab}{cd}
+\end{align}
+
+\subsubsection{Division av bråk}
+\label{Division av bråk}
+
+Division är en typ av multiplikation, vilket gör denna ganska enkel men aningen klurigare. Division är inversen av multiplikation, så att dividera med $5$ är samma sak som att multiplicera med $\frac{1}{5}$. Detta resulterar i att:
+
+\begin{align}
+	\frac{a}{b} \div\frac{c}{d} = \\ 
+	\frac{a}{b} \times \frac{d}{c} = \\
+	\frac{ad}{bc}
+\end{align}
+
+Det andra bråket vänder alltså bara på sig vid utbytet av divisionstecken mot multiplikationstecken.
+
+\newpage
 \subsection{Potenser}
 
+Potenser kan ses som repeterad multiplikation i vissa fall\footnote{andra definitioner krävs för att inkludera alla reella eller till och med komplexa exponenter. Det kommer konstigt nog först i universitetsmatten.}. Alltså att om $n$ är ett positivt heltal så gäller detta:
+
+\begin{align}
+	a^n = a_1 \times a_2 \times ... \times a_n
+\end{align}
+
+Här är några potensregler som gäller för alla tal:
+
+\begin{align}
+	a^ba^c = a^{b+c} \\
+	\frac{a^b}{a^c} = a^{b-c} \\
+	(a^b)^c=a^{bc} \\
+	(ab)^x=a^xb^x \\
+	\left(\frac{a}{b}\right)^x=\frac{a^x}{b^x}
+\end{align}
+
+\textit{Roten ur} kan skrivas på två sätt, där $n$ är ett positivt heltal:
+
+\begin{align}
+	\sqrt[n]{a} = a^{\frac{1}{n}}
+\end{align}
+
+\newpage
 \subsection{Ekvationer}
 
-\subsection{Algebraiska uttryck}
+En ekvation är ett typ av påstående, som innehåller en eller fler variabler (okända). Jag kan påstå att $3x+2 = 8$ utan att säga vad $x$ är. Just detta är endast sant om $x=2$.
+
+Ekvationer brukar kräva att man löser ut en variabel i slutändan. Metoden jag brukar ha är att först och efter varje steg se om jag kan förenkla ekvationen genom addition/subtraktion, sedan om det går genom multiplikation/division, och till sist om det går genom potenser.
+
+Detta är ett exempel:
+
+\begin{align}
+	\frac{x}{x+10} = \frac{24}{54}
+\end{align}
+
+Först så letar jag då om jag kan göra något med addition/subtraktion, vilket inte hjälper här. Nästa möjlighet är om multiplikation/division kan förenkla något här, vilket det kan genom multiplikation av $x+10$ på båda sidor\footnote{Detta förenklar då multiplikation är lättare att hantera än division, så vi vill få bort divisionstecken.}
+
+\begin{align}
+	x = \frac{24}{54}(x+10)
+\end{align}
+
+Nu kollar vi igen. Addition/subtraktion hjälper inget, men multiplikation/division hjälper återigen här. Vi förenklar genom att multiplicera in i parantesen.
+
+\begin{align}
+	x = \frac{24}{54}x + \frac{24}{54} \times 10
+\end{align}
+
+Återigen så letar vi. Addition/subtraktion verkar hjälpa denna gång då målet är att få x på samma sida av likhetstecknet. Vi subtraherar med $\frac{24}{54}x$. I samma veva kan vi även multiplicera in $10$ i bråket på höger sida.
+
+\begin{align}
+	x - \frac{24}{54}x = \frac{24}{54} \times 10 \\
+	x - \frac{24}{54}x = \frac{240}{54}
+\end{align}
+
+Nu så kikar vi igen. Multiplikation/divison hjälper för att möjliggöra subtraktion av bråken på vänster sida av likhetstecknet, genom att låta dem få samma nämnare som i \ref{Addition av bråk}.
+
+\begin{align}
+	\frac{54}{54}x - \frac{24}{54}x = \frac{240}{54}
+\end{align}
+
+Nu kan vi alltså subtrahera bråken på vänster sida väldigt lätt.
+
+\begin{align}
+	\frac{30}{54}x = \frac{240}{54}
+\end{align}
+
+Här så hjälper inte addition/subtraktion, men multiplikation/division gör. Vi dividerar med $\frac{30}{54}$ för att $x$ ska bli ensam på vänsterledet.
+
+\begin{align}
+	x = \frac{240}{54} \div \frac{30}{54}
+\end{align}
+
+Här så kan vi ändra om från division av bråken till multiplikation av bråken, på sättet beskrivet i \ref{Division av bråk}.
+
+\begin{align}
+	x = \frac{240}{54} \times \frac{54}{30}
+\end{align}
+
+$54$ i nämnaren på första bråket och i täljaren på andra bråket tar ut varann, och resterande steg bör gå rätt smidigt:
+
+\begin{align}
+	x = \frac{240}{30} \\
+	x = \frac{24}{3} \\
+	x = 8
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
