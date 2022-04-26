@@ -119,6 +119,7 @@ $m$-värdet styr hur mycket vi puttar upp eller puttar ner hela grafen, då det 
 Detta under kallas för ett ekvationssystem. De kan egentligen bestå av flera hundra eller mer ekvationer och variabler, men vi nöjer oss med två.
 
 \begin{align}
+	\label{59}
 	\begin{cases}
 		y+2x=8 \\
 		2y-x = 1
@@ -133,14 +134,27 @@ I ett ekvationssystem så kan tre fall inträffa.
 	\item Ekvationssystemet har ett oändligt antal lösningar
 \end{itemize}
 
-Ett sätt att visualisera dessa tre fall, är att skriva om ekvationerna i ekvationssystemet till formen $y=kx+m$ och sedan tänka på dem som linjer i ett ekvationssystem. Om två linjer har olika lutning, alltså $k$-värde, så kommer att korsa varann någonstans och därmed ha en lösning (koordinaten av korsningspunkten är lösningen)
+Ett sätt att visualisera dessa tre fall, är att skriva om ekvationerna i ekvationssystemet till formen $y=kx+m$ och sedan tänka på dem som linjer i ett koordinatsystem.
+
+\begin{align}
+	\begin{cases}
+		y+2x=8 \\
+		2y-x = 1
+	\end{cases} \Rightarrow 
+	\begin{cases}
+		y=-2x+8 \\
+		y = \frac{1}{2}x+\frac{1}{2}
+	\end{cases}
+\end{align}
+
+Om två linjer har olika lutning, alltså olika $k$-värde, så kommer linjerna att korsa varann någonstans och därmed ha en lösning (koordinaten av korsningspunkten är lösningen). Om linjerna har samma $k$-värde och olika $m$-värde så är de pararella och möts aldrig, så ekvationssystemet saknar lösning. Om linjerna har samma $k$-värde och samma $m$-värde så möts linjerna på ett oändligt antal koordinater, och därmed har ekvationssystemet ett oändligt antal lösningar. 
+
+Testa att checka vad för fall som gäller för ekvationsystemet i \eqref{59}!
 
 \subsubsection{Substitutionsmetoden}
 \label{Substitutionsmetoden}
 
-I det fallet att vi har två ekvationer, båda med samma två variabler i sig, så kan det hända att vi kan lösa fram ett värde hos vardera variabel.
-
-Detta under kallas för ett ekvationssystem. De kan egentligen bestå av flera hundra eller mer ekvationer och variabler, men vi nöjer oss med två.
+Substitutionsmetoden är en metod för att få fram lösningen på ett ekvationsystem. Här under har vi ett ekvationsysstem med två variabler
 
 \begin{align}
 	\begin{cases}
@@ -159,12 +173,12 @@ För att lösa det, så kan vi följa en viss stegmetod
 
 I fallet ovan så kan det se ut såhär:
 
-Steg 1, jag börjar med att lösa ut en variabel ur den ena ekvationen.
+Steg 1, vi börjar med att lösa ut en variabel ur den ena ekvationen.
 \begin{align}
 	y+2x = 8 \Rightarrow y = 8-2x \\
 \end{align}
 
-Steg 2, jag ersätter variabeln i den andra ekvationen med detta uttryck, så att det bara finns en variabel i ekvationen, och löser den.
+Steg 2, vi ersätter variabeln i den andra ekvationen med detta uttryck, så att det bara finns en variabel i ekvationen, och löser den.
 \begin{align}
 	2y-x = 1 \\
 	2(8-2x)-x = 1 \\
@@ -175,7 +189,7 @@ Steg 2, jag ersätter variabeln i den andra ekvationen med detta uttryck, så at
 	x = 3
 \end{align}
 
-Steg 3, jag sätter in lösningen till den andra ekvationen i den ursprungliga ekvationen, och därefter löser den med.
+Steg 3, vi sätter in lösningen till den andra ekvationen i den ursprungliga ekvationen, och därefter löser den med.
 
 \begin{align}
 	y+2x = 8 \\
@@ -187,14 +201,16 @@ Steg 3, jag sätter in lösningen till den andra ekvationen i den ursprungliga e
 Därmed är lösningen på ekvationssystemet
 
 \begin{align*}
-	x = 3 \\
-	y = 2
+	\begin{cases}
+		x = 3 \\
+		y = 2
+	\end{cases}
 \end{align*}
 
 \newpage
 \subsubsection{Additionsmetoden}
 
-Additionsmetoden fungerar lite annorlunda. Istället för att lösa ut en variabel och sätta in den i en annan ekvation så multiplicerar vi hela ekvationer med konstanter och adderar in dem i andra för att eliminera variabler. Så här går det till, med samma exempel som i \ref{Substitutionsmetoden}:
+Additionsmetoden fungerar lite annorlunda, men denna är min personliga preferens i de flesta fallen. Istället för att lösa ut en variabel och sätta in den i en annan ekvation så multiplicerar vi hela ekvationer med konstanter och adderar in dem i andra för att eliminera variabler. Så här går det till, med samma exempel som i \ref{Substitutionsmetoden}:
 
 \begin{align}
 	\begin{cases}
