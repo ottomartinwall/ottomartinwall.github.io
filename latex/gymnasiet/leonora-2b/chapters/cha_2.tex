@@ -114,14 +114,122 @@ $m$-värdet styr hur mycket vi puttar upp eller puttar ner hela grafen, då det 
 	f(x) = kx+m \Rightarrow f(0) = m
 \end{align}
 
-\subsection{Additionsmetoden och substitutionsmetoden}
+\subsection{Ekvationssystem}
 
-I det fallet att vi har två ekvationer, båda med samma två variabler i sig, 
+\subsubsection{Substitutionsmetoden}
+\label{Substitutionsmetoden}
 
+I det fallet att vi har två ekvationer, båda med samma två variabler i sig, så kan det hända att vi kan lösa fram ett värde hos vardera variabel.
 
+Detta under kallas för ett ekvationssystem. De kan egentligen bestå av flera hundra eller mer ekvationer och variabler, men vi nöjer oss med två.
 
+\begin{align}
+	\begin{cases}
+		y+2x=8 \\
+		2y-x = 1
+	\end{cases}
+\end{align}
 
+För att lösa det, så kan vi följa en viss stegmetod
 
+\begin{enumerate}
+	\item Lös ut en variabel ur den ena ekvationen.
+	\item Ersätt variabeln i den andra ekvationen med detta uttryck och lös ekvationen.
+	\item Lösningen till ekvationen sätts in i någon av de ursprungliga ekvationerna, som därefter löses.
+\end{enumerate}
+
+I fallet ovan så kan det se ut såhär:
+
+Steg 1, jag börjar med att lösa ut en variabel ur den ena ekvationen.
+\begin{align}
+	y+2x = 8 \Rightarrow y = 8-2x \\
+\end{align}
+
+Steg 2, jag ersätter variabeln i den andra ekvationen med detta uttryck, så att det bara finns en variabel i ekvationen, och löser den.
+\begin{align}
+	2y-x = 1 \\
+	2(8-2x)-x = 1 \\
+	16-4x-x = 1 \\
+	16-5x = 1 \\
+	5x + 1 = 16 \\
+	5x = 15 \\
+	x = 3
+\end{align}
+
+Steg 3, jag sätter in lösningen till den andra ekvationen i den ursprungliga ekvationen, och därefter löser den med.
+
+\begin{align}
+	y+2x = 8 \\
+	y+2(3) = 8 \\
+	y+6 = 8 \\
+	y = 2
+\end{align}
+
+Därmed är lösningen på ekvationssystemet
+
+\begin{align*}
+	x = 3 \\
+	y = 2
+\end{align*}
+
+\newpage
+\subsubsection{Additionsmetoden}
+
+Additionsmetoden fungerar lite annorlunda. Istället för att lösa ut en variabel och sätta in den i en annan ekvation så multiplicerar vi hela ekvationer med konstanter och adderar in dem i andra för att eliminera variabler. Så här går det till, med samma exempel som i \ref{Substitutionsmetoden}:
+
+\begin{align}
+	\begin{cases}
+		y+2x=8 \\
+		2y-x = 1
+	\end{cases}
+\end{align}
+
+Målet är att eliminera en variabel i varje ekvation så att vi får ekvationer med ensamma variabler i, vilket då är enkelt att lösa. Vi börjar med att multiplicera rad 1 med konstanten $(-2)$.
+
+\begin{align}
+	\begin{cases}
+		-2y-4x=-16 \\
+		2y-x = 1
+	\end{cases}
+\end{align}
+
+Därefter kan vi addera rad 1 till rad 2
+
+\begin{align}
+	\begin{cases}
+		-2y-4x=-16 \\
+		-5x = -15
+	\end{cases}
+\end{align}
+
+och förenkla rad 2 genom att dividera båda sidor med $(-5)$.
+
+\begin{align}
+	\begin{cases}
+		-2y-4x=-16 \\
+		x = 3
+	\end{cases}
+\end{align}
+
+Därefter kan vi addera in rad 2, multiplicerat med konstanten $4$, i rad 1 för att eliminera $x$-variabeln där.
+
+\begin{align}
+	\begin{cases}
+		-2y=-4 \\
+		x = 3
+	\end{cases}
+\end{align}
+
+Sedan kan vi förenkla rad 1 genom att dividera med $(-2)$ på båda sidor
+
+\begin{align}
+	\begin{cases}
+		y=2 \\
+		x = 3
+	\end{cases}
+\end{align}
+
+Därmed har vi samma svar som i \ref{Substitutionsmetoden}, men genom en annan metod.
 
 
 
