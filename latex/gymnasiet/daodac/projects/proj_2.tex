@@ -35,6 +35,8 @@ Tanken var ursprungligen att varje enhet skulle ha en egen fast \textit{IP-adres
 	\item \textbf{\textit{Subnet}:} Ett \textit{subnät} är en part av ett större nätverk. Det kan t.ex finnas olika subnät för olika divisioner i ett företag, som ändå tillsammans har en gemensam yttre ip-adress.
 	\item \textbf{\textit{Supernet}:} Detta är motsatsen utav \textit{subnet}, ett \textit{supernet} är en sammansättning av flera nätverk eller subnätverk. 
 	\item \textbf{\textit{Host Routing}:} Detta är processen då en \textit{host} skickar ett paket till en annan \textit{host}
+	\item \textit{\textbf{Summary}:} En router kan ta emot informationen om vägen till flera andra routrar som går till den, och om de vägarna delar många av de första bitsen i sin IP-adress så kan routern skapa en \textit{summerad} ip-adress som den kan visa upp för andra routrar och säga att "om ni ska skicka ett paket till en adress som börjar med dessa bits så kan ni skicka hit den!". Detta sparar datorresurser. \textit{Summary Routing} kallas även för \textit{Supernetting}.
+	\item \textit{\textbf{Major Network}:} Hittade inget om detta?
 \end{itemize}
 
 
@@ -55,7 +57,7 @@ De kan byta till klass A. Då vi idag ändå använder lokala nätverk med route
 
 En alternativ lösning är att skapa fler subnät.
 
-Klass C ägnar bara en byte åt dator-IDn, vilket resulterar att 128 finns, och 2 går åt annat så 126 är tillgängliga.
+Klass C ägnar bara en byte åt dator-IDn, vilket resulterar att 256 finns, och 2 går åt annat så 254 är tillgängliga.
 
 \paragraph{8. Förklara vad VPN är, hur det fungerar och varför det är bra att använda VPN både privat och företagsrelaterat.}
 
@@ -64,8 +66,6 @@ Klass C ägnar bara en byte åt dator-IDn, vilket resulterar att 128 finns, och 
 VPNer brukar användas till att t.ex nå nätverkskopplade resurser så som en NAS i hemmet eller kontoret. Det finns även VPN-tjänster så som ExpressVPN, som tillåter dig att koppla mot privata nätverk i olika länder för att ta sig runt \textit{geo-blocking}, vilket i praktik kan tillåta en att se andra serier på Netflix som inte finns i sitt hemland.
 
 Två protokoll som används mycket idag är OpenVPN och Wireguard, varav det andra är nyare, säkrare och snabbare (generellt sett).
-
-Test 5
 
 
 
