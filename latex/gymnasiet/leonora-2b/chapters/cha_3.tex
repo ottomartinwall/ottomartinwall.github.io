@@ -62,6 +62,8 @@ En andragradsfunktion kan därmed skrivas i formen
 
 som det görs i de allra flesta matteböcker.
 
+\subsubsection{}
+
 \newpage
 \subsection{Exponentialfunktion}
 
@@ -93,7 +95,39 @@ Därmed är $C = 10000$. Då räntan är 2\% per år, så är $a=1.02$. Detta re
 \newpage
 \subsection{Logaritm}
 
-Logaritmen är inversfunktionen\footnote{Checka \ref{Inversfunktion} för förklaring av inversfunktion.} till exponentialen.
+Logaritmen är inversfunktionen\footnote{Checka \ref{Inversfunktion} för förklaring av inversfunktion.} till exponentialen. Då exponentialfunktioner kan ha olika bas\footnote{bas är nedre delen av en potens, i $a^x$ är $a$ basen.}, så måste vi även ange den basen för logaritmen så att logaritmfunktionen faktiskt blir inversen. I matematik 2B så används bara basen 10 för logaritmen.
+
+Här under är $g(x)$ inversen av $f(x)$, och $\log_{10}$ benämner att logaritmen använder basen 10.
+\begin{align}
+	f(x) = 10^x \\
+	g(x) = \log_{10}(x)
+\end{align}
+Då $g(x)$ är inversfunktionen till $f(x)$ så gäller detta:
+\begin{align}
+	f(g(x)) = 10^{g(x)} = 10^{\log_{10}(x)} = x.
+\end{align}
+Detta leder till att
+\begin{align}
+	\log_{10}(10) = 1 \\
+	\log_{10}(100) = 2 \\
+	\log_{10}(1000) = 3 \\
+	\text{o.s.v.}
+\end{align}
+vilket är användbart att komma ihåg.
+
+\newpage
+\subsubsection{Logaritmlagar}
+
+Här använder jag förkortningen $\lg(x) = \log_{10}(x)$, då vi endast använder logaritmer med bas 10 i matematik 2B. Du kan också använda den förkortningen.
+
+\begin{align}
+	10^{\lg(a)}=a \\
+	\lg(a^b) = \lg(a)\cdot b \\
+	\lg(a)+\lg(b) = \lg(ab) \\
+	\lg(a)-\lg(b) = \frac{\lg(a)}{\lg(b)} \\
+\end{align} 
+
+
 
 
 
