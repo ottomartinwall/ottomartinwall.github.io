@@ -122,12 +122,41 @@ vilket är användbart att komma ihåg.
 
 Här använder jag förkortningen $\lg(x) = \log_{10}(x)$, då vi endast använder logaritmer med bas 10 i matematik 2B. Du kan också använda den förkortningen.
 
-\begin{align}
+\begin{theorem}{Logaritmlagar}
+	\begin{align}
 	10^{\lg(a)}=a \\
-	\lg(a^b) = \lg(a)\cdot b \\
-	\lg(a)+\lg(b) = \lg(ab) \\
-	\lg(a)-\lg(b) = \frac{\lg(a)}{\lg(b)} \\
+	\lg(a^b) = \lg(a)\cdot b \label{lg2} \\
+	\lg(a)+\lg(b) = \lg(ab) \label{lg3} \\
+	\lg(a)-\lg(b) = \lg\left(\frac{a}{b}\right) \label{lg4}
 \end{align} 
+\end{theorem}	
+
+\begin{proof}[Bevis för \eqref{lg2}]
+	\begin{align}
+		\lg(a^b) = c \\ 
+		a^b = 10^c \\
+		(a^b)^{\frac{1}{b}} = (10^c)^{\frac{1}{b}} \\
+		a = 10^{\frac{c}{b}} \\
+		\lg(a) = \frac{c}{b} \\
+		\lg(a)\cdot b = c \\
+	\end{align}
+	Vilket betyder att
+	\begin{align}
+		\lg(a^b) = \lg(a)\cdot b
+	\end{align}
+\end{proof}
+
+\begin{proof}[Bevis för \eqref{lg3}]
+	
+\end{proof}
+
+\begin{proof}[Bevis för \eqref{lg4}]
+	
+\end{proof}
+
+
+
+
 
 
 
