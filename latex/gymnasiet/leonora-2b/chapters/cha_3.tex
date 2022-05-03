@@ -46,11 +46,9 @@ Motivering för andra:
 
 \begin{definition}
 	En polynom är en funktion som kan skrivas i formen
-	
 	\begin{align}
 		f(x) = a_0x^0 + a_1x^1 + a_2x^2 + \hdots + a_nx^n
 	\end{align}
-	
 	där $n$ är ett positivt heltal från $0$ och uppåt och $a_0, a_1, a_2, \hdots, a_n$ är konstanter.
 \end{definition}
 
@@ -64,9 +62,38 @@ En andragradsfunktion kan därmed skrivas i formen
 
 som det görs i de allra flesta matteböcker.
 
+\newpage
+\subsection{Exponentialfunktion}
 
+\begin{definition}
+	En exponentialfunktion kan skrivas i formen
+	\begin{align}
+		f(x)=Ca^x
+	\end{align}
+	där $C$ och $a$ är konstanter.
+ \end{definition}
+ 
 
+Ett kännetecken av exponentialfunktioner är att när de ritas up grafiskt, och $a > 1$, så sticker grafen snabbt iväg uppåt i en allt högre takt. Då $a < 1$ dyker grafen neråt i en allt långsammare takt. Om $a=1$ så är funktionen bara konstant då $1^x=1$.
 
+\subsubsection{Exponentialmodeller}
+
+Exponentialfunktioner är bra på att beskriva saker där något växer eller minskar i en hastighet som är kopplad till det värde det är på vid tillfället. Ett exempel är ett bankkonto med ränta, som då växer olika mängd i faktiska kronor beroende på hur stort kontot är. Om/när kontot har 100 000kr så resulterar en 2\% ränta i att du får 2000kr per år, och om/när kontot har 1 000 000kr så resulterar det i 20 000kr.
+
+För att skapa en modell som beskriver detta scenario så väljer vi att $f(x)$ är benämner mängden pengar vid varje $x$, som representerar tid i år. Sedan väljer vi att starta vid 10000kr vid år 0.
+\begin{align}
+	f(x)=Ca^x \\
+	f(0)=Ca^0 = C
+\end{align}
+Därmed är $C = 10000$. Då räntan är 2\% per år, så är $a=1.02$. Detta resulterar i att funktionen som beskriver scenariot är
+\begin{align}
+	f(x)=10000\cdot1.02^x.
+\end{align}
+
+\newpage
+\subsection{Logaritm}
+
+Logaritmen är inversfunktionen\footnote{Checka \ref{Inversfunktion} för förklaring av inversfunktion.} till exponentialen.
 
 
 

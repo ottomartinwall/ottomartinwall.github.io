@@ -98,6 +98,7 @@ Since $f(x)$ is even, it is symmetric around the y-axis. The symmetric equivilan
 
 $\lim_{x\rightarrow 0^+} f(x) = f(0)$ because $f$ is right continuous. Since $f$ is odd, it is symmetric around the origin, and therefore $\lim_{x\rightarrow 0^-} f(x) = \lim_{x\rightarrow 0^+} f(x) = f(0) = 0$. Since $f$ is both right and left continuous at $x=0$, it is continuous at $x=0$.
 
+\newpage
 \subsubsection{Exercises 1.5}
 
 \paragraph{31.}
@@ -121,13 +122,17 @@ This means that $|L-M| \leq 2\epsilon = |L-M|/2 \Rightarrow 2 \leq 1$, which is 
 \newpage
 \paragraph{32.}
 
-Since $\lim_{x\rightarrow a} g(x) = M$,
+Since $\lim_{x\rightarrow a} g(x) = M$, the following must be true
 
-$\forall \epsilon > 0, \exists \delta > 0 : \forall x, 0<|x-a|<\delta \Rightarrow |g(x)-M|=|g(x)+(-M)| \leq |g(x)|+|(-M)|<\epsilon \Leftrightarrow |g(x)| < \epsilon - |M|$
+\begin{align*}
+	|g(x)| = |(g(x)-M)+M| \leq |g(x)-M|+|M| < \epsilon + |M|
+\end{align*}
 
-Since we're supposed to show that there exists some $\delta > 0$ which implies that $|g(x)| < 1 + |M|$, we can just choose $\epsilon = 1 + 2|M|$ so that $\epsilon - |M| = 1 + |M|$. This results in that
+If we choose $\epsilon = 1$ then
 
-$0<|x-a|<\delta \Rightarrow |g(x)| < 1 + |M|$
+\begin{align*}
+	|g(x)| < 1 + |M|
+\end{align*}
 
 Which was to be shown.
 
@@ -155,17 +160,6 @@ $\forall \epsilon > 0, \exists \delta > 0 : \forall x, (0<|x-a|<\delta \Rightarr
 
 Which shows that lim $\lim_{x\rightarrow a} f(x)g(x) = LM$.
 
-\paragraph{34.}
-
-$\lim_{x\rightarrow a} g(x) = M$ 
-
-Means that
-
-$\forall \epsilon > 0, \exists \delta > 0 : \forall x, (0<|x-a|<\delta \Rightarrow |g(x)-M|<\epsilon)$
-
-Then,
-
-$|g(x)-M| = |g(x)+(-M)| \leq |g(x)| + |M| \Leftrightarrow |g(x)| $ 
 
 
 

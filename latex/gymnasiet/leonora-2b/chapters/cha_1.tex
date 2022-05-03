@@ -202,7 +202,76 @@ Denna är kort, men viktig.
 	\end{align}
 \end{theorem}
 
+\newpage
+\subsection{Inversfunktion (viktigt till logaritmer)}
+\label{Inversfunktion}
 
+En inversfunktion är en funktion som gör exakt motsatt av originalfunktionen. Om $g(x)$ är inversfunktionen till $f(x)$, och $f(x)$ mappar\footnote{med mappar så menar jag att om jag sätter in värdet $1$ i funktionen, alltså att $x=1$, så ger funktionen $f(x)$ ut något värde beroende på värdet jag satte in, och om det är $3$ så mappar $f(x)$ $1 \rightarrow 3$.} $a \rightarrow b$, så mappar $g(x)$ $b \rightarrow a$.
+
+På grund av detta så kan man grafiskt se att en inversfunktion speglas runt linjen y=x till originalfunktionen.
+
+\subsubsection{Exempel}
+
+Vi väljer att $f(x) = 2x + 2$. $g(x)$ låter vi vara inversfunktionen av $f(x)$. Då $f(x)$ är en linjär funktion så kommer inversen av $g(x)$ också vara linjär då $g(x)$ är spegelbilden av $f(x)$ runt linjen $y=x$. Därmed kan vi konstatera att
+\begin{align}
+	g(x)=kx+m.
+\end{align}
+För att ta reda på $k$ och $m$ så kan vi skapa ett ekvationssystem med hjälp av att vi vet att $g(x)$ är inversen av $f(x)$.
+\begin{align}
+	f(0) = 2 \Rightarrow g(2) = 0 \\
+	f(1)=4 \Rightarrow g(4)=1
+\end{align}
+Jag väljer att använda additionsmetoden från \ref{Additionsmetoden}.
+\begin{align}
+	\begin{cases}
+		2k+m = 0 \\
+		4k+m = 1
+	\end{cases}
+\end{align}
+\begin{align}
+	\begin{cases}
+		-2k-m = 0 \\
+		4k+m = 1
+	\end{cases}
+\end{align}
+\begin{align}
+	\begin{cases}
+		-2k-m = 0 \\
+		2k = 1
+	\end{cases}
+\end{align}
+\begin{align}
+	\begin{cases}
+		-2k-m = 0 \\
+		k = \frac{1}{2}
+	\end{cases}
+\end{align}
+\begin{align}
+	\begin{cases}
+		-m = 1 \\
+		k = \frac{1}{2}
+	\end{cases}
+\end{align}
+\begin{align}
+	\begin{cases}
+		m = -1 \\
+		k = \frac{1}{2}
+	\end{cases}
+\end{align}
+
+Detta betyder då att
+
+\begin{align}
+	g(x) = \frac{1}{2}x-1.
+\end{align}
+
+Om vi nu tittar på $f(x)$ och $g(x)$ grafiskt så ser det ut såhär:
+
+\includegraphics[width=\textwidth]{img/5.png}
+
+I bilden är $f(x)$ den blåa linjen och $g(x)$ är den röda. Linjen som de speglas runt är $y=x$ som är orange här.
+
+Vi kan se i bilden att t.ex så är $f(1)=4$ och att om vi då stoppar in det värde $f(x)$ kastade ut, in i $g(x)$, så får vi $g(4)=1$ vilket gör att vi bara får tillbaka det värde vi hade innan. $g(x)$ är inversen av $f(x)$.
 
 
 
