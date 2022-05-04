@@ -44,6 +44,7 @@ Motivering för andra:
 
 \newpage
 \subsection{Polynom}
+\label{Polynom}
 
 \begin{definition}
 	En polynom är en funktion som kan skrivas i formen
@@ -62,8 +63,23 @@ En andragradsfunktion kan därmed skrivas i formen
 som det görs i de allra flesta matteböcker.
 
 \newpage
-\subsubsection{pq-formeln}
+\subsubsection{Andragradsekvationer/funktioner}
 
+En andragradsfunktion är en polynom\footnote{Definitionen av en polynom finns i \ref{Polynom}} av grad 2, och kan skrivas såhär:
+\begin{align}
+	f(x) = ax^2+bx+c.
+\end{align}
+Konstanten $c$ styr skärningspunkten i $y$-axeln, precis som för linjära funktioner. Detta är sant då
+\begin{align}
+	f(0) = c.
+\end{align}
+Konstanten $b$ styr lutningen av grafen i skärningspunkten i $y$-axeln, vilket effektivt gör att om $b>0$ så puttas hela grafen lite åt vänster, och om $b<0$ så puttas den åt höger. En förklaring för detta kräver matematik 3B så det skippar vi.
+
+Konstanten $a$ styr om grafen har en minimipunkt eller maximipunkt (glad mun eller ledsen mun), och $a$ styr även hur 'smal' grafen blir, där större absolutvärden\footnote{Ett absolutvärde av $a$, vilket skrivs $|a|$, benämner distansen från $0$ på tallinjen som $a$ ligger. Detta betyder t.ex att $|5|=|-5|=5$. Absolutvärdet är alltid positivt.} av $a$ leder till en smalare graf.
+
+Testa att leka runt med dessa variabler i Geogebra för att se effekten som jag har beskrivit för $a$, $b$ och $c$.
+
+\newpage
 \begin{theorem}[pq-formeln]
 	En andragradsekvation av formen
 	\begin{align}
