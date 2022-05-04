@@ -109,7 +109,7 @@ Efter det så tar jag roten ur VL och HL för att eliminera exponenten över VL.
 \begin{align}
 	x+\frac{p}{2} = \pm \sqrt{\left(\frac{p}{2}\right)^2 - q}
 \end{align}
-Sedan subtraherar jag med $\frac{p}{2}$ för att lösa ut $x$ helt. Detta är sista steget.
+Sedan subtraherar jag med $\frac{p}{2}$ för att lösa ut $x$ helt. Detta är det sista steget.
 \begin{align}
 	x = -\frac{p}{2}\pm \sqrt{\left(\frac{p}{2}\right)^2 - q}
 \end{align}
@@ -133,22 +133,21 @@ Ett kännetecken av exponentialfunktioner är att när de ritas up grafiskt, och
 
 Exponentialfunktioner är bra på att beskriva scenarion där förändringshastigheten är relaterad till det nuvarande värdet. Det kan vara ett bankkonto med ränta som resulterar i att det växer allt snabbare varje år, eller en bakteriekultur som växer i en takt som beror på hur många bakterier det är vid varje tillfälle.
 
-Vi kan testa skapa en modell som beskriver ett bankkonto med ränta. Vi låter $f(x)$ benämna bankkontots innehåll i kr, och $x$ vara tiden i år.
-
-För att skapa en modell som beskriver detta scenario så väljer vi att $f(x)$ är benämner mängden pengar vid varje $x$, som representerar tid i år. Sedan väljer vi att starta vid 10000kr vid år 0.
-\begin{align}
+Vi kan testa skapa en modell som beskriver ett bankkonto med ränta. Vi låter $f(x)$ benämna bankkontots innehåll i kr, och $x$ vara tiden i år. Vi låter startvärdet, vid år 0, vara 10 000 kr.
+\begin{align*}
 	f(x)=Ca^x \\
-	f(0)=Ca^0 = C
-\end{align}
+	f(0)=Ca^0 = C = 10000
+\end{align*}
 Därmed är $C = 10000$. Då räntan är 2\% per år, så är $a=1.02$. Detta resulterar i att funktionen som beskriver scenariot är
-\begin{align}
+\begin{align*}
 	f(x)=10000\cdot1.02^x.
-\end{align}
+\end{align*}
+Du kan testa skriva in funktionen i Geogebra för att se grafen.
 
 \newpage
 \subsection{Logaritm}
 
-Logaritmen är inversfunktionen\footnote{Checka \ref{Inversfunktion} för förklaring av inversfunktion.} till exponentialen. Då exponentialfunktioner kan ha olika bas\footnote{bas är nedre delen av en potens, i $a^x$ är $a$ basen.}, så måste vi även ange den basen för logaritmen när vi väljer en. I matematik 2B så används bara basen 10 för logaritmen.
+En logaritmfunktion är inversfunktionen\footnote{Checka \ref{Inversfunktion} för förklaring av inversfunktion.} till sin motsvarande exponentialfunktion. Då exponentialfunktioner kan ha olika bas\footnote{bas är nedre delen av en potens, i $a^x$ är $a$ basen.}, så måste vi även ange den basen för logaritmen när vi väljer en. I matematik 2B så används bara basen 10 för logaritmen.
 
 Här under är $g(x)$ inversen av $f(x)$, och $\log_{10}$ benämner att logaritmen använder basen 10.
 \begin{align}
