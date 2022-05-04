@@ -1,4 +1,5 @@
 \subsection{Konjugat och kvadreringsreglerna}
+\label{Konjugat och kvadreringsreglerna}
 
 Detta är bara att memorera. \bigskip
 
@@ -55,14 +56,48 @@ Motivering för andra:
 Utifrån detta så kan vi se att linjära funktioner är polynomer där konstanten med index 1 inte är lika med noll, men att alla konstanter med högre index är lika med noll. Något som Matematik 2B kör hårt på är dock just andragradsfunktioner, vilket är polynomer där konstanten med index 2 inte är lika med noll men alla konstanter med högre index är lika med noll.
 
 En andragradsfunktion kan därmed skrivas i formen
-
 \begin{align}
 	f(x) = ax^2 + bx + c
 \end{align}
-
 som det görs i de allra flesta matteböcker.
 
-\subsubsection{}
+\newpage
+\subsubsection{pq-formeln}
+
+\begin{theorem}[pq-formeln]
+	En andragradsekvation av formen
+	\begin{align}
+		x^2+px+q = 0
+	\end{align}
+	Har lösningen
+	\begin{align}
+		x = -\frac{p}{2}\pm \sqrt{\left(\frac{p}{2}\right)^2 - q}.
+	\end{align}
+	då $p$ och $q$ är konstanter.
+\end{theorem}
+
+\begin{proof}
+Här så måste vi använda oss av kvadreringsreglerna från \ref{Konjugat och kvadreringsreglerna}. Målet är att lösa ut $x$.
+\begin{align}
+	x^2+px+q = 0
+\end{align}
+Här gör jag kvadreringsregeln baklänges för att ta bort exponenten från $x$.
+\begin{align}
+	\left(x+\frac{p}{2}\right)^2-\left(\frac{p}{2}\right)^2+q = 0
+\end{align}
+Sedan subtraherar jag $q$ och adderar $\left(\frac{p}{2}\right)^2$ för att få över dem till HL.
+\begin{align}
+	\left(x+\frac{p}{2}\right)^2 = \left(\frac{p}{2}\right)^2 - q
+\end{align}
+Efter det så tar jag roten ur VL och HL för att eliminera exponenten över VL.
+\begin{align}
+	x+\frac{p}{2} = \pm \sqrt{\left(\frac{p}{2}\right)^2 - q}
+\end{align}
+Sedan subtraherar jag med $\frac{p}{2}$ för att lösa ut $x$ helt. Detta är sista steget.
+\begin{align}
+	x = -\frac{p}{2}\pm \sqrt{\left(\frac{p}{2}\right)^2 - q}
+\end{align}
+\end{proof}
 
 \newpage
 \subsection{Exponentialfunktion}
