@@ -171,7 +171,7 @@ vilket är användbart att komma ihåg.
 \newpage
 \subsubsection{Logaritmlagar}
 
-Här använder jag förkortningen $\lg(x) = \log_{10}(x)$, då vi endast använder logaritmer med bas 10 i matematik 2B. Du kan också använda den förkortningen.
+Här använder jag förkortningen $\lg(x) = \log_{10}(x)$ då vi endast använder logaritmer med bas 10 i matematik 2B. Du kan också använda den förkortningen.
 
 \begin{theorem}{Logaritmlagar}
 	\begin{align}
@@ -198,11 +198,35 @@ Här använder jag förkortningen $\lg(x) = \log_{10}(x)$, då vi endast använd
 \end{proof}
 
 \begin{proof}[Bevis för \eqref{lg3}]
-	
+	Vi låter $\lg(a) = m$ och $\lg(b) = n$.
+	\begin{align}
+		\lg(a) = m \rightarrow a = 10^m \\
+		\lg(b) = n \rightarrow b = 10^n
+	\end{align}
+	Detta betyder att
+	\begin{align}
+		ab = 10^m10^n = 10^{m+n}
+	\end{align}
+	Som leder till att
+	\begin{align}
+		\lg(ab) = m+n = \lg(a)+\lg(b).
+	\end{align}
 \end{proof}
 
 \begin{proof}[Bevis för \eqref{lg4}]
-	
+	Vi låter $\lg(a) = m$ och $\lg(b) = n$.
+	\begin{align}
+		\lg(a) = m \rightarrow a = 10^m \\
+		\lg(b) = n \rightarrow b = 10^n
+	\end{align}
+	Detta betyder att
+	\begin{align}
+		\frac{a}{b} = \frac{10^m}{10^n} = 10^{m-n}
+	\end{align}
+	Som leder till att
+	\begin{align}
+		\lg\left(\frac{a}{b}\right) = m-n = \lg(a)-\lg(b).
+	\end{align}
 \end{proof}
 
 

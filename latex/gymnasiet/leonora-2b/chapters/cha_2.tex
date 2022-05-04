@@ -12,6 +12,14 @@ Här är ett exempel på en koordinat $A = (3, 1)$ i detta koordinatsystem:
 \newpage
 \subsubsection{Avståndsformeln}
 
+\begin{theorem}[Avståndsformeln]
+	Avståndet mellan två punkter $A=(a,b)$ och $B=(d,c)$ är
+	\begin{align}
+		l = \sqrt{(a-c)^2+(b-d)^2} \text{ l.e}.
+	\end{align}
+\end{theorem}
+
+\begin{proof}[Motivering]
 Avståndet mellan två punkter i koordinatsystemet från \ref{Koordinatsystem} kan beräknas med hjälp av Pythagoras Sats från \ref{Pythagoras Sats}. Om vi börjar med två koordinater, $A=(2,2)$ och $B=(4,3)$
 
 \includegraphics[width=\textwidth]{img/3.png}
@@ -19,49 +27,49 @@ Avståndet mellan två punkter i koordinatsystemet från \ref{Koordinatsystem} k
 Så kan vi se att de bildar en rätvinklig triangel, där en av kateterna är längs x-axeln och den andra längs y-axeln. Avståndet är då den röda linjen. Om vi vet längden av de två kateterna, så kan vi veta längden för hypotenusan, med pythagoras sats.
 
 Längden av kateten längs x-axeln, som vi kan kalla $a$, är då absolutvärdet\footnote{absolutvärdet är distansen från $0$ på tallinjen, så t.ex är |-5| = 5. I fallet ovan så använder vi absolutvärdet då en distans aldrig kan vara negativ, men en differens mellan delar av två koordinater kan det.} av differensen mellan koordinaternas x-värden, så den kateten är
-
-\begin{align}
+\begin{align*}
 	a = \\
 	|2-4| = \\
 	|-2| = \\
 	2 \text{ (l.e)}
-\end{align}
-
+\end{align*}
 Vi kan göra exakt samma sak för kateten längs y-axeln, som vi kan kalla för $b$.
-
-\begin{align}
+\begin{align*}
 	b = \\
 	|2-3| = \\
 	|-1| = \\
 	1 \text{ (l.e)}
-\end{align}
-
+\end{align*}
 Då vi vill veta längden av hypotenusan, vilket är avståndet mellan koordinaterna, så kan vi lösa ut variabeln $c$ ur pythagoras sats, och sedan sätta in de värden vi har tagit fram.
-
-\begin{align}
+\begin{align*}
 	a^2+b^2=c^2 \\
 	c = \sqrt{a^2+b^2} \\
 	c = \sqrt{2^2+1^2} \\
 	c = \sqrt{5} \text{ (l.e)}
-\end{align}
-
+\end{align*}
 Vi kan nu generalisera det vi gjorde ovan. 
 
 Låt $A=(a,b)$, $B=(c,d)$ och $l$  avståndet mellan koordinaterna. Då är
-
-\begin{align}
+\begin{align*}
 	l = \sqrt{|a-c|^2+|b-d|^2}
-\end{align}
-
+\end{align*}
 och då absolutvärdefunktionen inte behövs, då vi ändå kvadrerar båda termerna, så kan vi förenkla detta till
-
 \begin{align}
 	l = \sqrt{(a-c)^2+(b-d)^2}.
 \end{align}
+\end{proof}
 
 \newpage
 \subsubsection{Mittpunktsformeln}
 
+\begin{theorem}[Mittpunktsformeln]
+	Mittpunkten mellan två koordinater, $A=(a,b)$ och $B=(c,d)$, är koordinaten
+	\begin{align}
+		C = \left(\frac{a+c}{2}, \frac{b+d}{2}\right)
+	\end{align}
+\end{theorem}
+
+\begin{proof}[Motivering]
 Mittpunksformeln är väldigt enkel. Målet är att hitta den punkt som är mitt emellan två koordinater.
 
 \includegraphics[width=\textwidth]{img/4.png}
@@ -71,6 +79,7 @@ Låt $A=(a,b)$, $B=(c,d)$ och låt $C$ vara deras mittpunkt. För att hitta vär
 \begin{align}
 	C = \left(\frac{a+c}{2}, \frac{b+d}{2}\right)
 \end{align}
+\end{proof}
 
 \newpage
 \subsection{Funktion}
@@ -91,29 +100,23 @@ vi kan rita up $f$ grafiskt i koordinatsystemet från \ref{Koordinatsystem}, gen
 \subsection{Räta linjens ekvation}
 
 Räta linjens ekvation brukar skrivas såhär:
-
 \begin{align}
 	y=kx+m
 \end{align}
-
 eller som en funktion:
-
 \begin{align}
 	f(x)=kx+m.
 \end{align}
-
 $k$-värdet styr förändringshastigheten, alltså hur mycket $y$-värdet förändras av en ändring hos $x$, $\frac{\Delta y}{\Delta x}$. Om $y = 3x$ så kommer $y$-värdet öka med $3$ då $x$-värdet ökar med 1. Om vi väljer två koordinater som ligger på grafen av en linjär funktion $f$, $A=(x_1,y_1)$ och $B=(x_2,y_2)$, så gäller det att
-
 \begin{align}
 	k = \frac{\Delta y}{\Delta x} = \frac{y_1-y_2}{x_1-x_2}
 \end{align}
-
 $m$-värdet styr hur mycket vi puttar upp eller puttar ner hela grafen, då det bara är en adderad konstant. $m$ värdet är också det $y$-värde där en funktion $f(x)=kx+m$ korsar $y$-axeln, då $f(0)=m$.
-
-\begin{align}
+\begin{align*}
 	f(x) = kx+m \Rightarrow f(0) = m
-\end{align}
+\end{align*}
 
+\newpage
 \subsection{Ekvationssystem}
 
 Detta under kallas för ett ekvationssystem. De kan egentligen bestå av flera hundra eller mer ekvationer och variabler, men vi nöjer oss med två.

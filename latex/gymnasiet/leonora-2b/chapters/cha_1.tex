@@ -47,12 +47,12 @@ Lättaste metoden för addition av bråk är att skriva om bråken så att de f�
 
 \begin{align}
 	\frac{1}{3} + \frac{3}{4} = \\
-	\frac{1\cdot 4}{3\cdot 4} + \frac{3\cdot 3}{4\cdot 3} = \\
-	\frac{4}{12} + \frac{9}{12} = \\
+	\frac{1\cdot 4}{3\cdot 4} + \frac{3\cdot 3}{4\cdot 3} = \label{expre1} \\
+	\frac{4}{12} + \frac{9}{12} = \label{expre2} \\
 	\frac{13}{12}
 \end{align}
 
-Metoden jag brukar använda för att skriva om bråken, är att multiplicera täljaren och nämnaren på det ena bråket, med nämnaren på det andra, och tvärt om. I exemplet ovan så har ena bråket nämnaren 3, så jag multiplicerar täljaren och nämnaren med just 3 på det andra bråket, och tvärt om med talet 4 på det förstnämnda bråket. Genom denna metod får bråken samma nämnare då $ab = ba$, som ses i nämnarna på rad (6) till (7). Efter det så kan man addera täljarna på bråken.
+Metoden jag brukar använda för att skriva om bråken, är att multiplicera täljaren och nämnaren på det ena bråket, med nämnaren på det andra, och tvärt om. I exemplet ovan så har ena bråket nämnaren 3, så jag multiplicerar täljaren och nämnaren med just 3 på det andra bråket, och tvärt om med talet 4 på det förstnämnda bråket. Genom denna metod får bråken samma nämnare då $ab = ba$, som ses i nämnarna på rad \eqref{expre1} till \eqref{expre2}. Efter det så kan man addera täljarna på bråken.
 
 Addition och subtraktion fungerar likadant här.
 
@@ -118,75 +118,75 @@ Ekvationer brukar kräva att man löser ut enskilda variabler i slutändan. Meto
 
 \paragraph{Exempel 1}
 
-\begin{align}
+\begin{align*}
 	\frac{x}{x+10} = \frac{24}{54}
-\end{align}
+\end{align*}
 
 Först så letar jag om jag kan göra något med addition/subtraktion, vilket inte hjälper här. Nästa möjlighet är om multiplikation/division kan förenkla något, vilket det kan genom multiplikation av $x+10$ på båda sidor\footnote{Detta förenklar då multiplikation är lättare att hantera än division, så vi vill få bort divisionstecken.}
 
-\begin{align}
+\begin{align*}
 	x = \frac{24}{54}(x+10)
-\end{align}
+\end{align*}
 
 Nu kollar vi igen. Addition/subtraktion hjälper inget, men multiplikation/division hjälper återigen här. Vi förenklar genom att multiplicera in i parantesen.
 
-\begin{align}
+\begin{align*}
 	x = \frac{24}{54}x + \frac{24}{54} \cdot 10
-\end{align}
+\end{align*}
 
 Återigen så letar vi. Addition/subtraktion verkar hjälpa denna gång då målet är att få x på samma sida av likhetstecknet. Vi subtraherar med $\frac{24}{54}x$. I samma veva kan vi även multiplicera in $10$ i bråket på höger sida.
 
-\begin{align}
+\begin{align*}
 	x - \frac{24}{54}x = \frac{24}{54} \times 10 \\
 	x - \frac{24}{54}x = \frac{240}{54}
-\end{align}
+\end{align*}
 
 Nu så kikar vi igen. Multiplikation/divison hjälper för att möjliggöra subtraktion av bråken på vänster sida av likhetstecknet, genom att låta dem få samma nämnare som i \ref{Addition av bråk}.
 
-\begin{align}
+\begin{align*}
 	\frac{54}{54}x - \frac{24}{54}x = \frac{240}{54}
-\end{align}
+\end{align*}
 
 Nu kan vi alltså subtrahera bråken på vänster sida väldigt lätt.
 
-\begin{align}
+\begin{align*}
 	\frac{30}{54}x = \frac{240}{54}
-\end{align}
+\end{align*}
 
 Här så hjälper inte addition/subtraktion, men multiplikation/division gör. Vi dividerar med $\frac{30}{54}$ för att $x$ ska bli ensam på vänsterledet.
 
-\begin{align}
+\begin{align*}
 	x = \frac{240}{54} \div \frac{30}{54}
-\end{align}
+\end{align*}
 
 Här så kan vi ändra om från division av bråken till multiplikation av bråken, på sättet beskrivet i \ref{Division av bråk}.
 
-\begin{align}
+\begin{align*}
 	x = \frac{240}{54} \times \frac{54}{30}
-\end{align}
+\end{align*}
 
 $54$ i nämnaren på första bråket och i täljaren på andra bråket tar ut varann, och resterande steg bör gå rätt smidigt:
 
-\begin{align}
+\begin{align*}
 	x = \frac{240}{30} \\
 	x = \frac{24}{3} \\
 	x = 8
-\end{align}
+\end{align*}
 
 \paragraph{Exempel 2}
 
-\begin{align}
+\begin{align*}
 	x^{\frac{1}{3}} = 3
-\end{align}
+\end{align*}
 
 Här så fungerar inte addition/subtraktion, eller multiplikation/division. Nästa sak att checka är alltså potenser. Här så kan vi använda oss av potensreglerna i \ref{Potenser}, där $(a^b)^c = a^{bc}$, för att ändra exponenten hos $x$ från $\frac{1}{3}$ till $1$.
 
-\begin{align}
+\begin{align*}
 	(x^{\frac{1}{3}})^{3} = (3)^3 \\
 	x^{\frac{3}{3}} = 27 \\
 	x^1 = 27 \\
 	x = 27
-\end{align}
+\end{align*}
 
 \newpage
 \subsection{Pythagoras Sats}
@@ -213,62 +213,60 @@ På grund av detta så kan man grafiskt se att en inversfunktion speglas runt li
 \subsubsection{Exempel}
 
 Vi väljer att $f(x) = 2x + 2$. Vi låter $g(x)$ vara inversfunktionen av $f(x)$. Då $f(x)$ är en linjär funktion så kommer inversen av $g(x)$ också vara linjär då $g(x)$ är spegelbilden av $f(x)$ runt linjen $y=x$. Därmed kan vi konstatera att
-\begin{align}
+\begin{align*}
 	g(x)=kx+m.
-\end{align}
+\end{align*}
 För att ta reda på $k$ och $m$ så kan vi skapa ett ekvationssystem med hjälp av att vi vet att $g(x)$ är inversen av $f(x)$.
-\begin{align}
+\begin{align*}
 	f(0) = 2 \Leftrightarrow g(2) = 0 \\
 	f(1)=4 \Leftrightarrow g(4)=1
-\end{align}
+\end{align*}
 Jag väljer att använda additionsmetoden från \ref{Additionsmetoden}.
-\begin{align}
+\begin{align*}
 	\begin{cases}
 		2k+m = 0 \\
 		4k+m = 1
 	\end{cases}
-\end{align}
+\end{align*}
 Jag multiplicerar rad 1 med $(-1)$
-\begin{align}
+\begin{align*}
 	\begin{cases}
 		-2k-m = 0 \\
 		4k+m = 1
 	\end{cases}
-\end{align}
+\end{align*}
 Jag adderar rad 1 till rad 2
-\begin{align}
+\begin{align*}
 	\begin{cases}
 		-2k-m = 0 \\
 		2k = 1
 	\end{cases}
-\end{align}
+\end{align*}
 Jag förenklar rad 2 genom att dividera med $2$
-\begin{align}
+\begin{align*}
 	\begin{cases}
 		-2k-m = 0 \\
 		k = \frac{1}{2}
 	\end{cases}
-\end{align}
+\end{align*}
 Jag adderar rad 2, två gånger, till rad 1.
-\begin{align}
+\begin{align*}
 	\begin{cases}
 		-m = 1 \\
 		k = \frac{1}{2}
 	\end{cases}
-\end{align}
+\end{align*}
 Jag dividerar rad 1 med $(-1)$
-\begin{align}
+\begin{align*}
 	\begin{cases}
 		m = -1 \\
 		k = \frac{1}{2}
 	\end{cases}
-\end{align}
-
+\end{align*}
 Detta betyder då att
-
-\begin{align}
+\begin{align*}
 	g(x) = \frac{1}{2}x-1.
-\end{align}
+\end{align*}
 
 Om vi nu tittar på $f(x)$ och $g(x)$ grafiskt så ser det ut såhär:
 
