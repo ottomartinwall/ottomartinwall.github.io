@@ -8,9 +8,17 @@
 \tableofcontents
 \newpage
 
-\mdfsetup{innertopmargin = 0.5cm, innerbottommargin = 0.5cm}
+\mdfsetup{innertopmargin = 17pt, innerbottommargin = 17pt, skipabove = 10pt, skipbelow = 10pt}
 \newmdtheoremenv{definition}{Definition}
 \newmdtheoremenv{theorem}{Theorem}
+
+\let\olddefinition\definition
+\let\oldtheorem\theorem
+\renewcommand{\definition}{\olddefinition\normalfont}
+\renewcommand{\theorem}{\oldtheorem\normalfont}
+
+\section{Analysis With an Introduction to Proof}
+\include{analysWithAnIntroductionToProof/cha_1}
 
 \section{Thomas' Calculus Early Transcendentals}
 \include{thomasCalculus/cha_1}
