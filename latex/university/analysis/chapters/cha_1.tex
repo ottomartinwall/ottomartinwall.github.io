@@ -1,0 +1,154 @@
+\newpage
+\chapter{Set Theory}
+
+\section{Ordered Pairs}
+
+\begin{definition}[Ordered Pair]
+	The \textbf{ordered pair} $(a,b)$ is the set whose members are $\{a\}$ and $\{a,b\}$. In symbols we have
+	\begin{align*}
+		(a,b) = \{\{a\}, \{a,b\}\}
+	\end{align*}
+\end{definition}
+
+This definition ensures that order matters. To show this, this theorem and its proof should suffice.
+
+\begin{theorem}[Ordered Pair Theorem]
+	\footnote{this is a made up name by me}
+	\begin{align*}
+		(a,b)=(c,d) \leftrightarrow a=c, b=d
+	\end{align*}
+\end{theorem}
+
+\begin{proof}
+	If $a=c$ and $b=d$, then 
+	\begin{align*}
+		(a,b)=\{\{a\}, \{a,b\} = \{\{c\}, \{c,d\}\}=(c,d)
+	\end{align*}
+	Conversely, suppose that $(a,b)=(c,d)$. Then by our definition we have $\{\{a\}, \{a,b\}\} = \{\{c\}, \{c,d\}\}$. We wish to conclude that $a=c$ and $b=d$. To this end we consider two cases, depending on whether $a=b$ or $a\neq b$.
+	
+	If $a=b$, then $\{a\} = \{a,b\}$, so $(a,b) = \{\{a\}\}$. Since $(a,b)=(c,d)$, we then have 
+	\begin{align*}
+		\{\{a\}\} = \{\{c\}, \{c,d\}\}.
+	\end{align*}
+	The set on the left has only one member, $\{a\}$. Thus the set on the right can have only one member, so $\{c\} = \{c,d\}$, and we can conclude that $c=d$. But then $\{\{a\}\} = \{\{c\}\}$, so $\{a\} = \{c\}$ and $a=c$. Thus $a=b=c=d$.
+	
+	On the other hand, if $a\neq b$, then from the preceding argument it follows that $c\neq d$. Since $(a,b) = (c,d)$, we must have 
+	\begin{align*}
+		\{a\} \in \{\{c\}, \{c,d\}\},
+	\end{align*}
+	which means that $\{a\} = \{c\}$ or $\{a\} = \{c,d\}$. In either case we have $c \in \{a\}$, so $a=c$. Again, since $(a,b)=(c,d)$, we must also have
+	\begin{align*}
+		\{a,b\} \in \{\{c\}, \{c,d\}\}.
+	\end{align*}
+	Thus $\{a,b\} = \{c\}$ or $\{a,b\} = \{c,d\}$. But $\{a,b\}$ has two distinct members and $\{c\}$ has only one, so we must have $\{a,b\} = \{c,d\}$. Now $a=c$, $a\neq b$, and $b\in \{c,d\}$, which implies that $b=d$. 
+\end{proof}
+
+\begin{definition}[Cartesian Product]
+	If $A$ and $B$ are sets, then the \textbf{Cartesian product} (or \textbf{cross product}) of $A$ and $B$, written $A\times B$, is the set of all ordered pairs $(a,b)$ such that $a\in A$ and $b\in B$. In symbols,
+	\begin{align*}
+		A\times B = \{(a,b):(a\in A) \land (b\in B)\}.
+	\end{align*}
+\end{definition}
+
+\newpage
+\section{Relation}
+
+\begin{definition}[Relation]
+	Let $A$ and $B$ be sets. A \textbf{relation between $A$ and $B$} is any subset R of $A\times B$. We say that an element $a$ in $A$ is \textbf{related} by R to an element $b$ in $B$ if $(a,b)\in \text{R}$, and we often denote this by writing "$a\text{R}b$". The first set $A$ is referred to as the \textbf{domain} of the relation and denoted by dom R. If $B=A$, then we speak of a relation R $\subseteq A\times A$ being a \textbf{relation on A}.
+\end{definition}
+
+\begin{definition}[Equivalence Relation]
+	A relation R on a set $S$ is an \textbf{equivalence relation} if it has the following properties for all $x,y,z \in S$:
+	\begin{itemize}
+		\item \textbf{Reflexive property:} $x$R$x$
+		\item \textbf{Symmetric property:} $x$R$y$ $\leftrightarrow$ $y$R$x$
+		\item \textbf{Transitive property:} ($x$R$y$ $\land$ $y$R$z$) $\rightarrow$ $x$R$z$
+	\end{itemize}
+\end{definition}
+
+An example for a \textbf{equivalence relation} is the relation "is parallel to" when considering all lines in the plane, if we agree that a line is parallel to itself.
+
+\begin{definition}[Equivalence Class]
+	\label{Equivalence Class}
+	Given an equivalence relation R on a set $S$, the \textbf{equivalence class} with respect to R of $x\in S$ is the set
+	\begin{align*}
+		E_x = \{y\in S:y\text{R}x\}
+	\end{align*}
+\end{definition}
+
+\begin{eg}
+ 	Let $S = \{a:a\text{ lives in Sweden}\}$, which is the set of all people living in Sweden. Also, let a equivalence relation on this set be
+ 	\begin{align*}
+		R = \{(a,b)\in S\times S:a \text{ was born in the same year as } b\}.
+	\end{align*}
+	Then
+ 	\begin{align*}
+		E_x = \{y\in S:y\text{R}x\}
+	\end{align*}
+	is the set of all people living in Sweden who was born during the same year as some person $x$ who is also living in Sweden.
+ \end{eg}
+ 
+\begin{theorem}
+	Two equivalence classes on the same set $S$ with the same equivalence relation R must be disjoint or equal.
+\end{theorem}
+
+\begin{proof}
+	Let R be an equivalence relation on a set $S$, and let $E_x$ and $E_y$ be two equivalence classes with respect to R of $x\in S$. Suppose that they overlap, then there exists some $w\in E_x \cap E_y$. For all $x'\in E_x$ we have $x'$R$x$, and because $w\in E_x$, $w$R$x$, and by symmetry, $x$R$w$. Also, $w\in E_y$ so $w$R$y$. By using transitivity, $x'$R$x$ and $x$R$w$ and $w$R$y$ implies that $x'$R$y$, which means that $x'\in E_y$ and that $E_x \subseteq E_y$. 
+	
+	Conversely, for all $y'\in E_y$ we have $y'$R$y$, and because $w\in E_y$, $w$R$y$, and by the symmetry property, $y$R$w$. Also, $w\in E_x$ so $w$R$x$. By using the transitivity property, $y'$R$y$ and $y$R$w$ and $w$R$x$ implies that $y'$R$x$ and that $E_y \subseteq E_x$. Since $E_x \subseteq E_y$ and $E_x \supseteq E_y$, it must be that $E_y = E_x$.
+\end{proof}
+
+\begin{definition}
+	A \textbf{partition} of a set $S$ is a collection P of nonempty subsets of $S$ such that
+	\begin{itemize}
+		\item Each $x\in S$ belongs to some subset $A\in$ P.
+		\item For all $A,B\in$ P, if $A\neq B$, then $A\cap B = \emptyset$.
+	\end{itemize}
+	A member of P is called a \textbf{piece} of the partition.
+\end{definition}
+
+\begin{eg}
+	Two equivalence classes on the same set $S$ with the same equivalence relation R who are not equal (and therefore disjoint) are two pieces of a partition P on the set $S$.
+\end{eg}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
