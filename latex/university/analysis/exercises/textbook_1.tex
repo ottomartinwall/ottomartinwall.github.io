@@ -37,6 +37,7 @@
 	Proof 3 in combination with that $f$ is surjective\footnote{Proof 3 needed the condition that $f$ was injective, and since proof 4 needs $f$ to be surjective and is based on proof 3, $f$ is now bijective.} means that $f(A\backslash C) = f(A)\backslash f(C) = B\backslash f(C)$ since $B =$ rng $f$ $= f(A)$. 
 \end{proof}
 
+\newpage
 \paragraph{(32)}
 
 \textit{Suppose that $f:A\rightarrow B$ is any function. Then a function $g:B\rightarrow A$ is called a
@@ -56,10 +57,22 @@
 \end{proof}
 
 \begin{proof}(\textbf{2})
-	Suppose that 
+	Suppose that $f$ has a right inverse and therefore $f(g(y))=y$ for all $y\in B$. This implies that $f$ is surjective, since for all $y\in B$ there exists some $x\in A$, which may be $g(y)$, such that $f(x)=y$.
 \end{proof}
 
+\newpage
+\paragraph{(33)}
 
+\textit{Let $S$ be a nonempty set and let $F$ be the set of all functions that map $S$ into $S$. Suppose that for every $f$ and $g$ in $F$ we have
+\begin{align*}
+	(f\circ g)(x)=(g\circ f)(x), \forall x\in S
+\end{align*}
+Prove that $S$ has only one element.}
+
+\begin{proof}
+	If $S$ contains more than one element, then there exists some functions $f$ and $g$ in $F$ that are neither surjective nor injective. Suppose that $x,x'\in S$ and that $x\neq x'$, and that $f(x)=x'$ and $f(x')=x'$, and that $g(x)=x$ and $g(x')=x$. Then $f(g(x))=f(x)=x'$, and $g(f(x))=g(x')=x$, which contradicts the statement that $(f\circ g)(x)=(g\circ f)(x), \forall x\in S$, so $S$ must contain less than two elements. Since $S$ is nonempty, it must therefore contain one element.
+\end{proof}
+ 
 
 
 
