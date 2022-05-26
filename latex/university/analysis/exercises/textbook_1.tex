@@ -28,7 +28,7 @@
 \end{proof}
 
 \begin{proof}(\textbf{3})
-	Proof 2 have already shown that $f(A)\backslash f(C)\subseteq f(A\backslash C)$, so to prove that $f(A)\backslash f(C) = f(A\backslash C)$ I must only prove the converse of the first statement.
+	Proof 2 have already shown that $f(A)\backslash f(C)\subseteq f(A\backslash C)$, so to prove that $f(A)\backslash f(C) = f(A\backslash C)$ I must only prove the reverse of the first statement.
 	
 	Let $f$ be injective\footnote{this is the necessary condition such that $f(A\backslash C) = f(A)\backslash f(C)$.}. For any $y\in f(A\backslash C)$, there exists one and only one $x\in A\backslash C$ such that $f(x)=y$. Since $x\in A\backslash C$, $x\in A$ and $f(x)\in f(A)$. Also, since $x\in A\backslash C$, $x\notin C$ and $f(x)\notin f(C)$. This implies that $f(x)\in f(A)\backslash f(C)$ and thus $y\in f(A)\backslash f(C)$. Since $y\in f(A\backslash C)$ implies $y\in f(A)\backslash f(C)$, and $y\in f(A)\backslash f(C)$ implies $y\in f(A\backslash C)$ from proof 2, it must be that $f(A\backslash C) = f(A)\backslash f(C)$. 
 \end{proof}
@@ -52,11 +52,11 @@
 \begin{proof}(\textbf{1})
 	Suppose that $f$ is injective. Let $g = \{(b,a)\in B\times A:(a,b)\in f\}\cup\{(b,a)\in B\times A:b\notin f(A)\}$\footnote{I added the part $\cup\{(b,a)\in B\times A:b\notin f(A)\}$ to $g$ to show that $f$ must not be surjective.}. By definition, each $a\in A$ corresponds to one and only one $b\in B$ such that $f(a)=b$, and because of the definition of $g$, for each $b\in B$ such that $f(a)=b$, $g(b)=a$, which implies that $g(f(a))=a$ for all $a\in A$. 
 	
-	Conversely, suppose that $f(x)\in B$ and $f(x')\in B$, and that $f(x)=f(x')$. Since $g(f(a))=a$ for all $a\in A$, $g(f(x))=g(f(x'))$ implies that $x=x'$. Therefore, $f$ is injective.
+	Conversely, suppose that $f(x)\in B$ and $f(x')\in B$, and that $f(x)=f(x')$. If $g(f(a))=a$ for all $a\in A$, $g(f(x))=g(f(x'))$ implies that $x=x'$. Therefore, $f$ is injective.
 \end{proof}
 
 \begin{proof}(\textbf{2})
-	NOT DONE
+	Suppose that 
 \end{proof}
 
 
