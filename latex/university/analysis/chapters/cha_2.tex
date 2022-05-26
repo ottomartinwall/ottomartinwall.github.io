@@ -60,7 +60,7 @@ If a function is bijective, then it is particularly well behaved.
 	
 	Suppose that $f:A\rightarrow B$, and that $C_1\subseteq A$ and $C_2\subseteq A$, and that $C_1 \cap C_2 = \emptyset$ and that $f(C_1)=f(C_2)$. Then $f^{-1}[f(C_1]=C_1 \cup C_2$, which must contain more members than $C_1$. Therefore, $C\subseteq f^{-1}[f(C)]$ as was to be prooven.\footnote{if $f$ were injective (which it isn't in the proof) then $C = f^{-1}[f(C)]$, which is shown in the proof of \ref{theolabel1}.} \bigskip
 	
-	For case 2,\footnote{My original proof, may contain faults} suppose that $f:A\rightarrow B$ and $D\subseteq B$. Let $D_1 = \{d\in D: \exists a\in A \ni f(a)=d\}$, and let $D_2 = \{d\in D: \forall a\in A,f(a)\neq d\}$. This implies that $D = D_1 \cup D_2$ and $D_1 \cap D_2 = \emptyset$. The definition of $D_1$ also means that $f[f^{-1}(D_1)] = D_1$. Also, because of the definition of $D_2$, $f^{-1}(D)=f^{-1}(D_1\cup D_2)=f^{-1}(D_1)$ since $f^{-1}(D_2)=\emptyset$.
+	For case 2, suppose that $f:A\rightarrow B$ and $D\subseteq B$. Let $D_1 = \{d\in D: \exists a\in A \ni f(a)=d\}$, and let $D_2 = \{d\in D: \forall a\in A,f(a)\neq d\}$. This implies that $D = D_1 \cup D_2$ and $D_1 \cap D_2 = \emptyset$. The definition of $D_1$ also means that $f[f^{-1}(D_1)] = D_1$. Also, because of the definition of $D_2$, $f^{-1}(D)=f^{-1}(D_1\cup D_2)=f^{-1}(D_1)$ since $f^{-1}(D_2)=\emptyset$.
 	
 	Since $f[f^{-1}(D_1)] = D_1 = f[f^{-1}(D)]$ and $D_1 \cap D_2 = \emptyset$, it must be that $f[f^{-1}(D)]\subseteq D$ because $D$ has equal or more members than $D_1$.
 \end{proof}
@@ -75,11 +75,11 @@ If a function is bijective, then it is particularly well behaved.
 \end{theorem}
 
 \begin{proof}
-	We begin with case 1.\footnote{My original proof, may contain faults}
+	We begin with case 1.
 	
  	Suppose that $f:A\rightarrow B$, and that $C_1\subseteq A$ and $C_2\subseteq A$, and that $f(C_1)=f(C_2)$. Then $f^{-1}[f(C_1)]=C_1\cup C_2$. Since $f$ is injective, and $f(C_1)=f(C_2)$, it must be that $C_1 = C_2$, and therefore $f^{-1}[f(C_1)]=C_1$.\bigskip
  	
- 	For case 2,\footnote{My original proof, may contain faults} suppose that $f:A\rightarrow B$ and $D\subseteq B$. Let $D_1 = \{d\in D: \exists a\in A \ni f(a)=d\}$, and let $D_2 = \{d\in D: \forall a\in A,f(a)\neq d\}$. This implies that $D = D_1 \cup D_2$ and $D_1 \cap D_2 = \emptyset$. The definition of $D_1$ also means that $f[f^{-1}(D_1)] = D_1$. Since $f$ is surjective, $D_2=\emptyset$, which means that $D = D_1$ since $D_1 \cup D_2 = D_1$, and therefore $f[f^{-1}(D_1)] = D_1$ implies that $f[f^{-1}(D)] = D$.
+ 	For case 2, suppose that $f:A\rightarrow B$ and $D\subseteq B$. Let $D_1 = \{d\in D: \exists a\in A \ni f(a)=d\}$, and let $D_2 = \{d\in D: \forall a\in A,f(a)\neq d\}$. This implies that $D = D_1 \cup D_2$ and $D_1 \cap D_2 = \emptyset$. The definition of $D_1$ also means that $f[f^{-1}(D_1)] = D_1$. Since $f$ is surjective, $D_2=\emptyset$, which means that $D = D_1$ since $D_1 \cup D_2 = D_1$, and therefore $f[f^{-1}(D_1)] = D_1$ implies that $f[f^{-1}(D)] = D$.
 \end{proof}
 
 \newpage
@@ -96,6 +96,7 @@ If a function is bijective, then it is particularly well behaved.
 \end{definition}
 
 \begin{theorem}
+	\label{theolabel2}
 	Let $f:A\rightarrow B$ and $g:B\rightarrow C$. Then
 	\begin{enumerate}
 		\item $f$ and $g$ are surjective $\implies$ $g \circ f$ is surjective.
@@ -109,7 +110,7 @@ If a function is bijective, then it is particularly well behaved.
 	
 	Since $g$ is surjective, rng $g=C$, which means that $\forall c\in C, \exists b\in B \ni g(b)=c$. Now since $f$ is surjective, $\exists a\in A \ni f(a)=b$. But then $(g\circ f)(a)=g(f(a))=g(b)=c$, so $g\circ f$ is surjective. \bigskip
 	
-	Case 2:\footnote{My original proof, may contain faults}
+	Case 2:
 	
 	Suppose that $b'=f(a')\in B$ and $b=f(a)\in B$, and that $g(b')=g(b)\in C$. This implies that $b'=b$ since $g$ is injective, which means that $f(a')=f(a)$, but because $f$ too is injective, this implies that $a'=a$. This results in that $g(f(a'))=g(f(a)) \implies a'=a$, so by definition, $g\circ f$ is injective.
 	
@@ -133,6 +134,37 @@ To extend the idea of pre-image from \ref{image}, we can define a \textbf{invers
 \begin{remark}
 	If $f:A\rightarrow B$ is bijective, then $f^{-1}:B\rightarrow A$ is bijective. 
 \end{remark}
+
+\begin{definition}[Identity Function]
+	A function defined on a set $A$ that maps each element in $A$ onto itself is called the \textbf{identity function} on $A$, and is denoted by $i_a$.
+\end{definition}
+
+\begin{remark}
+	If $f:A\rightarrow B$ and $f$ is bijective, then
+	\begin{itemize}
+		\item $f^{-1}\circ f = i_A$,
+		\item $f\circ f^{-1} = i_B$.
+	\end{itemize}
+\end{remark}
+
+\begin{theorem}
+	Let $f:A\rightarrow B$ and $g:B\rightarrow C$ be bijective. Then the composition $g\circ f:A\rightarrow C$ is bijective and $(g\circ f)^{-1}=f^{-1}\circ g^{-1}$.
+\end{theorem}
+
+\begin{proof}
+	By theorem \ref{theolabel2} we know that $g\circ f$ is bijective, so there exists an inverse $(g\circ f)^{-1}$. We are asked to verify the equality of the two functions $(g\circ f)^{-1}$ and $f^{-1}\circ g^{-1}$, as sets of ordered pairs. To this end, suppose $(c,a)\in (g\circ f)^{-1}$. By the definition of an inverse function, this means $(a,c)\in g\circ f$. The definition of composition implies that
+	$$\exists b\in B \ni [(a,b)\in f]\land [(b,c)\in g].$$
+	Since $f$ and $g$ are bijective, this means that $(b,a)\in f^{-1}$ and $(c,b)\in g^{-1}$. That is, $f^{-1}(b)=a$ and $g^{-1}(c)=b$. But then,
+	\begin{align}
+		(f^{-1}\circ g^{-1})(c)=f^{-1}(g^{-1}(c))=f^{-1}(b)=a
+	\end{align}
+	so that $(c,a)\in (f^{-1}\circ g^{-1})$ and $(g\circ f)^{-1}\subseteq (f^{-1}\circ g^{-1})$.
+	
+	To the other end, suppose that $(c,a)\in (f^{-1}\circ g^{-1})$. The definition of composition implies that 
+	$$\exists b\in B \ni [(c,b)\in g^{-1}]\land [(b,a)\in f^{-1}].$$
+	This implies that $(b,c)\in g$ and that $(a,b)\in f$ and therefore $(a,c)\in g\circ f$. Since both $f$ and $g$ are bijective, there must exist an inverse $(g\circ f)^{-1}$ such that $(c,a)\in (g\circ f)^{-1}$. Now, since $(c,a)\in (f^{-1}\circ g^{-1})$ implies that $(c,a)\in (g\circ f)^{-1}$, and $(c,a)\in (g\circ f)^{-1}$ implies that $(c,a)\in (f^{-1}\circ g^{-1})$, it must be that $(g\circ f)^{-1} = (f^{-1}\circ g^{-1})$.
+\end{proof}
+
 
 
 
