@@ -114,6 +114,8 @@ An example for a \textbf{equivalence relation} is the relation "is parallel to" 
 \newpage
 \section{Cardinality}
 
+\textbf{This subsection requires understanding of the definition of a function between two sets, and understanding of surjection and injection (and therefore bijection). This can be learned in Chapter \ref{ChapterFunctions}}.
+
 \begin{definition}[Set Equivalence]
 	Two sets $S$ and $T$ are called \textbf{set equivalent}, and we write $S\sim T$, if there exists a bijective function from $S$ onto $T$.
 \end{definition}
@@ -121,7 +123,7 @@ An example for a \textbf{equivalence relation} is the relation "is parallel to" 
 This definition ensures that if two sets are set equivalent, they contain the same number of elements, since a bijective function between them will set up a one-to-one correspondence between the elements of each set.
 
 \begin{definition}[Finite or Infinite Set]
-	A set $S$ is said to be \textbf{finite} if $S=\emptyset$ or if there exists $n\in N$ and a bijection $f:\{1,2,\hdots,n\}\rightarrow S$.\footnote{Moving forward, we will make use of the set $I_n=\{1,2,\hdots,n\}$.} If a set is not finite, it is said to be \textbf{infinite}.
+	A set $S$ is said to be \textbf{finite} if $S=\emptyset$ or if there exists $n\in \N$ and a bijection $f:\{1,2,\hdots,n\}\rightarrow S$.\footnote{Moving forward, we will make use of the set $I_n=\{1,2,\hdots,n\}$.} If a set is not finite, it is said to be \textbf{infinite}.
 \end{definition}
 
 \begin{definition}
@@ -136,9 +138,93 @@ This definition ensures that if two sets are set equivalent, they contain the sa
 	Against our intuition from finite sets, if $E$ is the set of all even natural numbers, then $\N\sim E$, because if $f(n)=2n$, then $f:\N\rightarrow E$ is bijective. Therefore, both $\N$ and $E$ has the cardinal number $\aleph_0$ even though $E\subset \N$.
 \end{remark}
 
+\begin{eg}
+	$\Z$, the set of all integers, is denumerable since $f:\N \rightarrow \Z$ is bijective if $$f(n)=\begin{cases}
+		0 \text{ if $n=1$}\\
+		\frac{n}{2} \text{ if $n$ is even}\\
+		\lceil-\frac{n}{2}\rceil \text{ if $n$ is odd}
+	\end{cases}$$
+	because this leads to that
+	\begin{align*}
+		f(1) &\rightarrow 0 \\
+		f(2) &\rightarrow 1 \\
+		f(3) &\rightarrow (-1) \\
+		f(4) &\rightarrow 2 \\
+		f(5) &\rightarrow (-2) \\
+		&\vdots
+	\end{align*}
+	So for any $b\in \Z$, there exists a $a\in \N$ such that $f(a)=b$, which implies that $f$ is surjective, and there is also a one to one correspondence between the two sets so $f$ is injective, and therefore bijective.
+\end{eg}
+
 \begin{notation}
-	For any nonempty set $S$, which may or may not be infinite, 
+	For any nonempty finite set $S$, there exists a bijection $f:I_n\rightarrow S$ for some $n\in \N$. Therefore, we use this function to count the members as $f(1),f(2),f(3),\hdots,f(n)$. Letting $f(k)=s_k$ we can write $S=\{s_1,s_2,\hdots,s_n\}$. We can also do this for any denumerable set $T$, since because it is denumerable, there exists a bijection $g:\N\rightarrow T$, so we can use $g(k)=t_k$ to write $T=\{t_1,t_2,t_3,\hdots\}$.
 \end{notation}
+
+\begin{lemma}
+	\label{lemmalabel1}
+	Every subset of a finite set is finite.
+\end{lemma}
+
+\begin{proof}
+	--- NOT DONE
+\end{proof}
+
+
+\begin{theorem}
+	\label{theolabel3}
+	Let $S$ be a countable set and let $T\subseteq S$. Then $T$ is countable.
+\end{theorem}
+
+\begin{proof}
+	If $T$ is finite, then we are done. Thus we may assume that $T$ is infinite. This implies that $S$ is infinite\footnote{This implication is true by lemma \ref{lemmalabel1}}, so $S$ is denumerable (since it is countable and infinite). Therefore, there exists a bijection $f:\N\rightarrow S$ and we can write $S$ as a list of distinct members
+	\begin{align*}
+		S=\{s_1,s_2,s_3,\hdots\}
+	\end{align*}
+	where $f(n)=s_n$. Now let
+	\begin{align*}
+		A=\{n\in\N:s_n\in T\}.
+	\end{align*}
+	Since $A$ is a nonempty subset of $\N$, the \textit{Well-Ordering Property of $\N$} implies that $A$ has a least member, say $a_1$. Similarly, the set $A\backslash \{a_1\}$ has a least member, say $a_2$. In general, having chosen $a_1,\hdots,a_k$, let $a_{k+1}$ be the least member in $A\backslash \{a_1,\hdots,a_k\}$. Essentially, if we select from our listing of $S$ those terms that are in $T$ and keep them in the same order, then $a_n$ is the subscript of the \textit{n}th term in this new list.
+	
+	Now define a function $g:\N\rightarrow\N$ by $g(n)=a_n$. Since $T$ is infinite, $g$ is defined for every $n\in\N$. Since $a_{n+1}\notin \{a_1,\hdots,a_n\}$, g must be injective\footnote{I suppose that this is a small proof by induction that $g$ is injective? This proof is not mine and is taken from \textit{Analysis with an Introduction to Proof}.}. Thus tje composition $f\circ g$ is also injective. Since each element of $T$ is somewhere in the listing of $S$, $g(\N)$ includes all the subscripts of terms in $T$. Thus $f\circ g$ is a bijection from $\N$ onto $T$ and $T$ is denumerable.
+\end{proof}
+
+\begin{theorem}
+	Let S be a nonempty set. The following three conditions are equivalent.
+	\begin{enumerate}
+		\item $S$ is countable.
+		\item There exists an injection $f:S\rightarrow \N$.
+		\item There exists a surjection $g:\N\rightarrow S$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+	Suppose that $S$ is countable. Then there exists some bijection $h:J\rightarrow S$ where $J=I_n$ for some $n\in \N$ if $S$ is finite, or $J=\N$ if $S$ is infinite. In either case, $h^{-1}:S\rightarrow \N$ is at least injective. Thus (1) implies (2). 
+	
+	Now suppose that there exists an injection $f:S\rightarrow \N$. Then $f$ is a bijection from $S$ to $f(S)$, so $f^{-1}$ is a bijection from $f(S)$ to $S$. Let $g:\N\rightarrow S$ be defined by
+	\begin{align*}
+		g(n) = \begin{cases}
+			f^{-1}(n), \text{ if $n\in f(S)$} \\
+			p, \text{ if $n\notin f(S)$}
+		\end{cases}
+	\end{align*}
+	where $p\in S$. Then $g[f(S)]=f^{-1}[f(S)]=S$ and $g[\N\backslash f(S)]=\{p\}$, so that $g$ is a surjection from $\N$ onto $S$. Thus, (2) implies (3).
+	
+	Finally, suppose that there exists a surjection $g:\N\rightarrow S$. Define $h:S\rightarrow \N$ by
+	\begin{align*}
+		h(s) \text{ is the smallest $n\in \N$ such that $g(n)=s$.}
+	\end{align*}
+	Then $h$ is an injection from $S$ to $\N$, and hence a bijection from $S$ onto the subset $h(S)$ of $\N$. Since $\N$ is countable, theorem \ref{theolabel3} implies that $h(S)$ is countable. Since $S$ and $h(S)$ are set equivalent, because there exists a bijection between the two sets, $S$ is also countable.
+\end{proof}
+
+
+
+
+
+
+
+
+
 
 
 
