@@ -1,0 +1,303 @@
+\subsection{Konjugat och kvadreringsreglerna}
+\label{Konjugat och kvadreringsreglerna}
+
+Detta är bara att memorera. \bigskip
+
+\begin{theorem}{Konjugatregeln}
+	\begin{align}
+	(a+b)(a-b) = a^2-b^2
+	\end{align}
+\end{theorem}
+
+Motivering:
+
+\begin{align}
+	(a+b)(a-b) = \\ 
+	a^2 - ab + ab + b^2 = \\
+	a^2 + b^2
+\end{align}
+
+\begin{theorem}{Kvadreringsreglerna}
+	\begin{align}
+		(a+b)^2 = a^2+2ab+b^2 \\
+		(a-b)^2 = a^2-2ab+b^2
+	\end{align}
+\end{theorem}
+
+Motivering för första:
+
+\begin{align}
+	(a+b)^2 = \\
+	(a+b)(a+b) = \\
+	a^2 + ab + ba + b^2 = \\
+	a^2 + 2ab + b^2
+\end{align}
+
+Motivering för andra:
+
+\begin{align}
+	(a-b)^2 = \\
+	(a-b)(a-b) = \\
+	a^2 - ab - ba + (-b)^2 = \\
+	a^2 - 2ab + b^2
+\end{align}
+
+\newpage
+\subsection{Polynom}
+\label{Polynom}
+
+\begin{definition}
+	En polynom är en funktion som kan skrivas i formen
+	\begin{align}
+		f(x) = a_0x^0 + a_1x^1 + a_2x^2 + \hdots + a_nx^n
+	\end{align}
+	där $n$ är ett positivt heltal från $0$ och uppåt och $a_0, a_1, a_2, \hdots, a_n$ är konstanter.
+\end{definition}
+
+Utifrån detta så kan vi se att linjära funktioner är polynomer där konstanten med index 1 inte är lika med noll, men att alla konstanter med högre index är lika med noll. Något som Matematik 2B kör hårt på är dock just andragradsfunktioner, vilket är polynomer där konstanten med index 2 inte är lika med noll men alla konstanter med högre index är lika med noll.
+
+En andragradsfunktion kan därmed skrivas i formen
+\begin{align}
+	f(x) = ax^2 + bx + c
+\end{align}
+som det görs i de allra flesta matteböcker.
+
+\newpage
+\subsubsection{Andragradsekvationer/funktioner}
+
+En andragradsfunktion är en polynom\footnote{Definitionen av en polynom finns i \ref{Polynom}} av grad 2, och kan skrivas såhär:
+\begin{align}
+	f(x) = ax^2+bx+c.
+\end{align}
+Konstanten $c$ styr skärningspunkten i $y$-axeln, precis som för linjära funktioner. Detta är sant då
+\begin{align}
+	f(0) = c.
+\end{align}
+Konstanten $b$ styr lutningen av grafen i skärningspunkten i $y$-axeln, vilket effektivt gör att om $b>0$ så puttas hela grafen lite åt vänster, och om $b<0$ så puttas den åt höger. En förklaring för detta kräver matematik 3B så det skippar vi.
+
+Konstanten $a$ styr om grafen har en minimipunkt eller maximipunkt (glad mun eller ledsen mun), och $a$ styr även hur 'smal' grafen blir, där större absolutvärden\footnote{Ett absolutvärde av $a$, vilket skrivs $|a|$, benämner distansen från $0$ på tallinjen som $a$ ligger. Detta betyder t.ex att $|5|=|-5|=5$. Absolutvärdet är alltid positivt.} av $a$ leder till en smalare graf.
+
+Testa att leka runt med dessa variabler i Geogebra för att se effekten som jag har beskrivit för $a$, $b$ och $c$.
+
+\newpage
+\begin{theorem}[pq-formeln]
+	En andragradsekvation av formen
+	\begin{align}
+		x^2+px+q = 0
+	\end{align}
+	Har lösningen
+	\begin{align}
+		x = -\frac{p}{2}\pm \sqrt{\left(\frac{p}{2}\right)^2 - q}.
+	\end{align}
+	då $p$ och $q$ är konstanter.
+\end{theorem}
+
+\begin{proof}
+Här så måste vi använda oss av kvadreringsreglerna från \ref{Konjugat och kvadreringsreglerna}. Målet är att lösa ut $x$.
+\begin{align}
+	x^2+px+q = 0
+\end{align}
+Här gör jag kvadreringsregeln baklänges för att ta bort exponenten från $x$.
+\begin{align}
+	\left(x+\frac{p}{2}\right)^2-\left(\frac{p}{2}\right)^2+q = 0
+\end{align}
+Sedan subtraherar jag $q$ och adderar $\left(\frac{p}{2}\right)^2$ för att få över dem till HL.
+\begin{align}
+	\left(x+\frac{p}{2}\right)^2 = \left(\frac{p}{2}\right)^2 - q
+\end{align}
+Efter det så tar jag roten ur VL och HL för att eliminera exponenten över VL.
+\begin{align}
+	x+\frac{p}{2} = \pm \sqrt{\left(\frac{p}{2}\right)^2 - q}
+\end{align}
+Sedan subtraherar jag med $\frac{p}{2}$ för att lösa ut $x$ helt. Detta är det sista steget.
+\begin{align}
+	x = -\frac{p}{2}\pm \sqrt{\left(\frac{p}{2}\right)^2 - q}
+\end{align}
+\end{proof}
+
+\newpage
+\subsection{Exponentialfunktion}
+
+\begin{definition}
+	En exponentialfunktion kan skrivas i formen
+	\begin{align}
+		f(x)=Ca^x
+	\end{align}
+	där $C$ och $a$ är konstanter.
+ \end{definition}
+ 
+
+Ett kännetecken av exponentialfunktioner är att när de ritas up grafiskt, och $a > 1$, så sticker grafen snabbt iväg uppåt i en allt högre takt. Då $a < 1$ dyker grafen neråt i en allt långsammare takt. Om $a=1$ så är funktionen bara konstant då $1^x=1$.
+
+\subsubsection{Exponentialmodeller}
+
+Exponentialfunktioner är bra på att beskriva scenarion där förändringshastigheten är relaterad till det nuvarande värdet. Det kan vara ett bankkonto med ränta som resulterar i att det växer allt snabbare varje år, eller en bakteriekultur som växer i en takt som beror på hur många bakterier det är vid varje tillfälle.
+
+Vi kan testa skapa en modell som beskriver ett bankkonto med ränta. Vi låter $f(x)$ benämna bankkontots innehåll i kr, och $x$ vara tiden i år. Vi låter startvärdet, vid år 0, vara 10 000 kr.
+\begin{align*}
+	f(x)=Ca^x \\
+	f(0)=Ca^0 = C = 10000
+\end{align*}
+Därmed är $C = 10000$. Då räntan är 2\% per år, så är $a=1.02$. Detta resulterar i att funktionen som beskriver scenariot är
+\begin{align*}
+	f(x)=10000\cdot1.02^x.
+\end{align*}
+Du kan testa skriva in funktionen i Geogebra för att se grafen.
+
+\newpage
+\subsection{Logaritm}
+
+En logaritmfunktion är inversfunktionen\footnote{Checka \ref{Inversfunktion} för förklaring av inversfunktion.} till sin motsvarande exponentialfunktion. Då exponentialfunktioner kan ha olika bas\footnote{bas är nedre delen av en potens, i $a^x$ är $a$ basen.}, så måste vi även ange den basen för logaritmen när vi väljer en. I matematik 2B så används bara basen 10 för logaritmen.
+
+Här under är $g(x)$ inversen av $f(x)$, och $\log_{10}$ benämner att logaritmen använder basen 10.
+\begin{align}
+	f(x) = 10^x \\
+	g(x) = \log_{10}(x)
+\end{align}
+Då $g(x)$ är inversfunktionen till $f(x)$ så gäller detta:
+\begin{align}
+	f(g(x)) = 10^{g(x)} = 10^{\log_{10}(x)} = x.
+\end{align}
+Detta leder till att
+\begin{align}
+	\log_{10}(10) = 1 \\
+	\log_{10}(100) = 2 \\
+	\log_{10}(1000) = 3 \\
+	\text{o.s.v.}
+\end{align}
+vilket är användbart att komma ihåg.
+
+\newpage
+\subsubsection{Logaritmlagar}
+
+Här använder jag förkortningen $\lg(x) = \log_{10}(x)$ då vi endast använder logaritmer med bas 10 i matematik 2B. Du kan också använda den förkortningen.
+
+\begin{theorem}{Logaritmlagar}
+	\begin{align}
+	10^{\lg(a)}=a \\
+	\lg(a^b) = \lg(a)\cdot b \label{lg2} \\
+	\lg(a)+\lg(b) = \lg(ab) \label{lg3} \\
+	\lg(a)-\lg(b) = \lg\left(\frac{a}{b}\right) \label{lg4}
+\end{align} 
+\end{theorem}	
+
+\begin{proof}[Bevis för \eqref{lg2}]
+	\begin{align}
+		\lg(a^b) = c \\ 
+		a^b = 10^c \\
+		(a^b)^{\frac{1}{b}} = (10^c)^{\frac{1}{b}} \\
+		a = 10^{\frac{c}{b}} \\
+		\lg(a) = \frac{c}{b} \\
+		\lg(a)\cdot b = c \\
+	\end{align}
+	Vilket betyder att
+	\begin{align}
+		\lg(a^b) = \lg(a)\cdot b
+	\end{align}
+\end{proof}
+
+\begin{proof}[Bevis för \eqref{lg3}]
+	Vi låter $\lg(a) = m$ och $\lg(b) = n$.
+	\begin{align}
+		\lg(a) = m \rightarrow a = 10^m \\
+		\lg(b) = n \rightarrow b = 10^n
+	\end{align}
+	Detta betyder att
+	\begin{align}
+		ab = 10^m10^n = 10^{m+n}
+	\end{align}
+	Som leder till att
+	\begin{align}
+		\lg(ab) = m+n = \lg(a)+\lg(b).
+	\end{align}
+\end{proof}
+
+\begin{proof}[Bevis för \eqref{lg4}]
+	Vi låter $\lg(a) = m$ och $\lg(b) = n$.
+	\begin{align}
+		\lg(a) = m \rightarrow a = 10^m \\
+		\lg(b) = n \rightarrow b = 10^n
+	\end{align}
+	Detta betyder att
+	\begin{align}
+		\frac{a}{b} = \frac{10^m}{10^n} = 10^{m-n}
+	\end{align}
+	Som leder till att
+	\begin{align}
+		\lg\left(\frac{a}{b}\right) = m-n = \lg(a)-\lg(b).
+	\end{align}
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

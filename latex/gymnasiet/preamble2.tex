@@ -1,0 +1,34 @@
+\documentclass[12pt, oneside]{article}
+\usepackage[hidelinks]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb, amsmath, amsthm, mathtools, systeme, parskip, graphicx, multirow, xifthen, mdframed}
+\usepackage[margin=1cm, a5paper, top=20mm, headheight=110pt, voffset=0pt, footskip=14.5pt]{geometry}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\jot}{15pt}
+
+\makeatother
+\def\@lecture{}%
+\newcommand{\lecture}[3]{
+    \ifthenelse{\isempty{#3}}{%
+        \def\@lecture{Lecture #1}%
+    }{%
+        \def\@lecture{Lecture #1: #3}%
+    }%
+    \subsection{\@lecture}
+    \def\date{#2}%
+}
+\makeatletter
+
+\makeatother
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhead[L]{\@lecture}
+\fancyhead[R]{\date}
+
+\fancyfoot[L]{\thepage}  % Right odd,  Left even
+\fancyfoot[R]{}          % Right even, Left odd
+\fancyfoot[C]{\rightmark}     % Center
+
+\makeatletter
