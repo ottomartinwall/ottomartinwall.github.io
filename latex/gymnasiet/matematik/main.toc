@@ -1,8 +1,0 @@
-\babel@toc {english}{}\relax 
-\contentsline {section}{\tocsection {}{1}{Macluarin- och Taylorserier}}{3}{section.1}%
-\contentsline {section}{\tocsection {}{2}{Eulers formel}}{10}{section.2}%
-\contentsline {section}{\tocsection {}{3}{Simulering av himlakroppars rörelse}}{15}{section.3}%
-\contentsline {section}{\tocsection {}{4}{Mandelbrottmängden}}{21}{section.4}%
-\contentsline {section}{\tocsection {}{5}{Dubbelpendeln}}{22}{section.5}%
-\contentsline {subsubsection}{\tocsubsubsection {}{}{\textbf {Lagrangemekanik}}}{23}{section*.2}%
-\contentsline {subsubsection}{\tocsubsubsection {}{}{\textbf {Uträkning}}}{23}{section*.3}%
