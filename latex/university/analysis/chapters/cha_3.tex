@@ -1,0 +1,19 @@
+\chapter{Proof Techniques}
+
+\section{Mathematical Induction}
+
+\begin{axiom}(Well-Ordering Property of $\N$).
+	If $S$ is a nonempty subset of $\N$, then there exists an element $m\in S$ such that $m\leq k$ for all $k\in S$.
+\end{axiom}
+
+\begin{theorem}[Principle of Mathematical Induction]
+	Let $P(n)$ be a statement that is either true or false for each $n\in \N$. Then $P(n)$ is true for all $n\in\N$, provided that
+	\begin{enumerate}
+		\item $P(1)$ is true, and
+		\item for each $k\in \N$, if $P(k)$ is true, then $P(k+1)$ is true.
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+	This will be a proof by contradiction, using the tautology "$(p\implies q) \Leftrightarrow [(p \quad \land \sim q) \implies c]$", where "$\sim$" denotes negation and "$c$" is a false statement. Suppose that $(a)$ and $(b)$ hold, but $P(n)$ is false for some $n\in\N$.
+\end{proof}
