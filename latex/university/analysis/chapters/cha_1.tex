@@ -218,6 +218,59 @@ This definition ensures that if two sets are set equivalent, they contain the sa
 	Then $h$ is an injection from $S$ to $\N$, and hence a bijection from $S$ onto the subset $h(S)$ of $\N$. Since $\N$ is countable, theorem \ref{theolabel3} implies that $h(S)$ is countable. Since $S$ and $h(S)$ are set equivalent, because there exists a bijection between the two sets, $S$ is also countable.
 \end{proof}
 
+\begin{theorem}
+	The set $\R$ of real numbers is uncountable.
+\end{theorem}
+
+\begin{proof}
+	Since any subset of a countable set is countable (theorem \ref{theolabel3}), it suffices to show that the interval $J=(0,1)$ is uncountable. If $J$ were countable, we could list its members and have 
+	$$J=\{x_1,x_2,x_3,\hdots\}=\{x_n:n\in\N\}.$$
+	Each element of $J$ has an infinite decimal expansion, so we can write
+	\begin{align*}
+		x_1 &= 0.a_{11}a_{12}a_{13}\hdots, \\
+		x_2 &= 0.a_{21}a_{22}a_{23}\hdots, \\
+		x_3 &= 0.a_{31}a_{32}a_{33}\hdots, \\
+		&\vdots
+	\end{align*}
+	where each $a_{ij}\in \{0,1,\hdots,9\}$. We now construct a real number $y=b_1b_2b_3\hdots$ by defining
+	$$b_n=\begin{cases}
+		2, \quad \text{if $a_{nn}\neq 2$} \\
+		3, \quad \text{if $a_{nn}=2$}
+	\end{cases}$$
+	Since each digit in the decimal expansion of $y$ is either $2$ or $3$, $y\in J$. But $y$ is not one of the numbers $x_n$, since it differs from $x_n$ in the $n$th decimal place. This contradicts our assumption that $J$ is countable, so $J$ must be uncountable.
+\end{proof}
+
+\begin{definition}[Cardinal Number of a Set]
+	We denote the cardinal number of a set $S$ by $|S|$, so that we have $|S|=|T|$ iff $S$ and $T$ are set equivalent, which implies that there exists a bijection $f:S\rightarrow T$. We define $|S|\leq|T|$ to mean that there exists an injection $f:S\rightarrow T$, and $|S|<|T|$ means that $|S|\leq|T|$ and $|S|\neq|T|$.
+\end{definition}
+
+\begin{theorem}
+	If $S\subseteq T$, then $\abs{S}\leq \abs{T}$.
+\end{theorem}
+
+\begin{proof}(\textbf{1})
+	If $S\subseteq T$, then for each $s\in S$ there exists one $t\in T$ with the relation $s=t$. If we let a function $f:S\rightarrow T$ be defined by $f(s)=s$, it is injective, and since there exists an injection that maps $S$ into $T$, we say that $\abs{S}\leq \abs{T}$ by definition.
+\end{proof}
+
+\begin{remark}
+	$\abs{\R}$ is usually written as $c$, for continuum. Since $\N\subseteq\R$, we have $\aleph_0\leq c$ by the theorem above. In fact, since $\N$ is countable and $\R$ is uncountable, we have $\aleph_0<c$. Therefore, there exists more than one transfinite cardinal number.
+\end{remark}
+
+\begin{definition}[Power Set]
+	For any set $S$, $\curs{P}(S)$ is the collection of all subsets of $S$. This collection is called the \textbf{power set} of $S$.
+\end{definition}
+
+\begin{theorem}
+	For any set $S$, we have $\abs{S}<\abs{\curs P(S)}$
+\end{theorem}
+
+\begin{proof}
+	The function $g:S\rightarrow \curs P(S)$ given by $g(s)=\{s\}$ is injective, so we have $\abs{S}\leq \abs{\curs P(S)}$. To prove that $\abs{S}\neq \abs{\curs P(S)}$, we show that no function from $S$ to $\curs P(S)$ can be surjective\footnote{This ensures that no function can be bijective from $S$ to $\curs P(S)$, so that $\abs{S}\neq \abs{P(S)}$}. Suppose that $f:S\rightarrow \curs P(S)$. Then for each $x\in S$, $f(x)\subseteq S$. For some $x$ in $S$ it may be that $x\in f(x)$, or $x\notin f(x)$. Let 
+	$$T=\{x\in S:x\notin f(x)\}.$$
+	Then $T\subseteq S$, so $T\in \curs P(S)$. If $f$ were surjective, then $T=f(y)$ for some $y\in S$. Now either $y\in T$ or $y\notin T$. If $y\in T$, then by the definiton of $T$, $y\notin T$. If $y\notin T$, then by the definition of $T$, $y\in T$. Therefore, $y\in T$ iff $y\notin T$, which is a contradiction, so it must be that $\abs{S}<\abs{\curs P(S)}$.
+\end{proof}
+
+
 
 
 
