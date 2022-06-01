@@ -73,6 +73,50 @@ Prove that $S$ has only one element.}
 	If $S$ contains more than one element, then there exists some functions $f$ and $g$ in $F$ that are neither surjective nor injective. Suppose that $x,x'\in S$ and that $x\neq x'$, and that $f(x)=x'$ and $f(x')=x'$, and that $g(x)=x$ and $g(x')=x$. Then $f(g(x))=f(x)=x'$, and $g(f(x))=g(x')=x$, which contradicts the statement that $(f\circ g)(x)=(g\circ f)(x), \forall x\in S$, so $S$ must contain less than two elements. Since $S$ is nonempty, it must therefore contain one element.
 \end{proof}
 
+\newpage
+\subsection{The Real Numbers}
+
+\subsubsection{Exercises 1}
+
+\paragraph{(3)}
+
+\textit{Prove that $1^2+2^2+\hdots+n^2=\frac{1}{6}n(n+1)(2n+1)$ for all $n\in\N$.}
+
+First, we must know if this is true for $n=1$.
+$$1^2=\frac{1}{6}(1)(2)(3)$$
+$$1=1$$
+
+Now, suppose that the statement is true for some $k\in\N$, 
+$$1^2+2^2+\hdots+k^2=\frac{1}{6}k(k+1)(2k+1).$$
+
+\begin{align*}
+	1^2+2^2+\hdots+k^2+(k+1)^2=\frac{1}{6}k(k+1)(2k+1) + (k+1)^2 = \\
+	=\frac{1}{6}k(k+1)(2k+1) + (k^2+2k+1) = \\
+	= \frac{1}{6}(2k^3+k^2+2k^2+k)+(k^2+2k+1) = \\
+	= \frac{1}{6}(2k^3+k^2+2k^2+k)+\frac{1}{6}(6k^2+12k+6) = \\
+	= \frac{1}{6}(2k^3+9k^2+13k+6) = \\
+	= \frac{1}{6}(k+1)(2k^2+7k+6) = \\
+	= \frac{1}{6}(k+1)(k+2)(2k+3) = \\
+	= \frac{1}{6}[k+1]([k+1]+1)(2[k+1]+1)
+\end{align*}
+
+Since the statement is true for $n=1$, and if it is true for some $k\in\N$ then it it also true for $(k+1)\in\N$, it must be that the statement is true for all $n\in\N$ by induction.
+
+\newpage
+\paragraph{(16)}
+
+\textit{If $a$, $b$ and $c\in\N$ such that $a-b$ is a multiple of $c$, prove that $a^n-b^n$ is a multiple of $c$ for all $n\in\N$.}
+
+\begin{align*}
+	a^n-b^n &= (a-b)(a+b)(a^2+b^2)(a^4+b^4)(a^8+b^8)\hdots(a^{n/2}+b^{n/2}) = \\
+	&=\prod_{k=0}^{\frac{n}{2}-1} (a-b)(a^{2^k}+b^{2^k})
+\end{align*}
+
+for all $n=2^k$ such that $k\in\N$.
+
+---Not Finished---
+
+I can only prove it for $n=2^k$ such that $k\in\N$, not for all $n\in\N$ :( 
 
 
 

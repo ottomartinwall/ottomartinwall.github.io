@@ -1,0 +1,117 @@
+\chapter{The Real Numbers $\R$}
+
+This will be an axiomatic approach, not constructive.
+
+\begin{axiom}($\R$ is an Ordered Field).
+	
+
+	We assume the existence of a set $\R$, called the set of real numbers, and two operations "$+$" and "$\cdot$", called addition and multiplication, such that the following properties apply:
+	\begin{enumerate}
+		\item For all $x,y\in\R$, $x+y\in\R$ and if $x=w$ and $y=z$, then $x+y=w+z$.
+		\item For all $x,y\in\R$, $x+y=y+x$.
+		\item For all $x,y,z\in\R$, $x+(y+z)=(x+y)+z$.
+		\item There is a unique real number $0$ such that $x+0=x$, for all $x\in\R$.
+		\item For each $x\in\R$ there is a unique real number $-x$ such that $x+(-x)=0$.
+		\item For all $x,y\in\R$, $x\cdot y\in\R$ and if $x=w$ and $y=z$, then $x\cdot y=w\cdot z$.
+		\item For all $x,y\in\R$, $x\cdot y=y\cdot x$.
+		\item For all $x,y\in\R$, $x\cdot (y\cdot z)=(x\cdot y)\cdot z$.
+		\item There is a unique real number $1$ such that $1\neq 0$ and $x\cdot 1=x$ for all $x\in \R$.
+		\item For each $x\in\R$ with $x\neq 0$, there is a unique real number $1/x$ such that $x(1/x)=1$. We also write $x^{-1}$ or $\frac{1}{x}$ in place of $1/x$.
+		\item For all $x,y,z\in\R$, $x\cdot (y+z)=x\cdot y + x\cdot z$.\footnote{These first eleven axioms are called field axioms because they describe a system known as a \textbf{field} in abstract algebra.}
+	\end{enumerate}
+	Also, $\R$ satisfies four order axioms, which identify the properties of the relation "$<$". We may write $y>x$ instead of $x<y$, and $x\leq y$ is equivalent to "$x<y$ or $x=y$".
+	\begin{enumerate}
+		\item For all $x,y\in\R$, exactly one of the relations $x=y$, $x>y$, or $x<y$ holds.\footnote{This is the \textbf{trichotomy law}.}
+		\item For all $x,y,z\in\R$, if $x<y$ and $y<z$, then $x<z$.
+		\item For all $x,y,z\in\R$, if $x<y$ then $x+z<y+z$.
+		\item For all $x,y,z\in\R$, if $x<y$ and $z>0$, then $xz>yz$.
+	\end{enumerate}
+\end{axiom}
+
+\begin{note}
+	The set of complex numbers, $\C$, is not an ordered field and does not satisfy the order axioms.
+\end{note}
+
+These fifteen axioms are not unique to $\R$, but also hold for $\Q$, as an example. What makes $\R$ unique is its completeness axiom. To define this axiom, we must first develop some tools for it.
+
+\begin{definition}[Upper and Lower Bounds]
+	Let $S\subseteq\R$. If there exists a real number $m$ such that $m\geq s$ for all $s\in S$, then $m$ is called an \textbf{upper bound} of $S$, and we say that $S$ is bounded above. If $m\leq s$ for all $s\in S$, then $m$ is a \textbf{lower bound} of $S$ and $S$ is bounded below.
+	
+	If an upper bound $m$ of $S$ is a member of $S$, then $m$ is called the \textbf{maximum} of $S$, denoted by max $S$.
+	
+	Similarly, if a lower bound of $S$ is a member of $S$, then it is called the \textbf{minimum} of $S$, denoted by min $S$.
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

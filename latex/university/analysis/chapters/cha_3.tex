@@ -15,5 +15,86 @@
 \end{theorem}
 
 \begin{proof}
-	This will be a proof by contradiction, using the tautology "$(p\implies q) \Leftrightarrow [(p \quad \land \sim q) \implies c]$", where "$\sim$" denotes negation and "$c$" is a false statement. Suppose that $(a)$ and $(b)$ hold, but $P(n)$ is false for some $n\in\N$.
+	This will be a proof by contradiction, using the tautology "$(p\implies q) \Leftrightarrow [(p \quad \land \sim q) \implies c]$", where "$\sim$" denotes negation and "$c$" is a false statement. Suppose that $(a)$ and $(b)$ hold, but $P(n)$ is false for some $n\in\N$. Let
+	$$S=\{n\in\N:P(n)\text{ is false}\}.$$
+	Then $S$ is not empty and the well-ordering property guarantees the existence of an element $m\in S$ that is a least element of $S$. Since $P(1)$ is true by (1), $1\notin S$, so that $m>1$. It follows that $m-1$ is also a natural number, and since $m$ is the least element in $S$, we must have $m-1\notin S$.
+	
+	But since $m-1\notin S$, it must be that $P(m-1)$ is true. We now apply (2) with $k=m-1$ to conclude that $P(k+1)=P(m)$ is true. this implies that $m\in S$, which contradicts our original choice of $m$. We conclude that $P(n)$ must be true for all $n\in\N$.
 \end{proof}
+
+A more general form of mathematical induction is
+
+\begin{theorem}Let $m\in\N$ and let $P(n)$ be a statement that is either true or false for each $n\geq m$. Then $P(n)$ is true for all $n\geq m$, provided that
+\begin{enumerate}
+	\item $P(m)$ is true, and
+	\item for each $k\geq m$, if $P(k)$ is true, then $P(k+1)$ is true.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+	The proof will use the original principle of induction. For each $r\in \N$, let $Q(r)$ be the statement "$P(r+m-1)$ is true.". Then from (1) we know that $Q(1)$ holds. Now let $j\in \N$ and suppose that $Q(j)$ holds. That is, $P(j+m-1)$ is true. Since $j\in\N$,
+	$$j+m-1=m+(j-1)\geq m$$,
+	so by (2), $P(j+m)$ must be true. Thus $Q(j+1)$ holds and the induction step is verified. We conclude that $Q(r)$ holds for all $r\in\N$.
+	
+	Now if $n\geq m$, let $r=n-m+1$, so that $r\in\N$. Since $Q(r)$ holds, $P(r+m-1)$ is true. But $P(r+m-1)$ is the same as $P(n)$, so $P(n)$ is true for all $n\geq m$.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
