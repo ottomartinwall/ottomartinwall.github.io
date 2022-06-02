@@ -34,12 +34,25 @@ This will be an axiomatic approach, not constructive.
 
 These fifteen axioms are not unique to $\R$, but also hold for $\Q$, as an example. What makes $\R$ unique is its completeness axiom. To define this axiom, we must first develop some tools for it.
 
-\begin{definition}[Upper and Lower Bounds]
+\begin{definition}[Upper \& Lower Bounds]
 	Let $S\subseteq\R$. If there exists a real number $m$ such that $m\geq s$ for all $s\in S$, then $m$ is called an \textbf{upper bound} of $S$, and we say that $S$ is bounded above. If $m\leq s$ for all $s\in S$, then $m$ is a \textbf{lower bound} of $S$ and $S$ is bounded below.
 	
 	If an upper bound $m$ of $S$ is a member of $S$, then $m$ is called the \textbf{maximum} of $S$, denoted by max $S$.
 	
 	Similarly, if a lower bound of $S$ is a member of $S$, then it is called the \textbf{minimum} of $S$, denoted by min $S$.
+\end{definition}
+
+\begin{definition}[Supremum \& Infimum]
+	Let $S\subseteq \R$. Suppose that $S$ is bounded above, then the least upper bound is called the \textbf{supremum} of $S$, also denoted as sup $S$. Iff $m=\text{sup }S$, then
+	\begin{enumerate}
+		\item $m\geq s$ for all $s\in S$, and
+		\item if $m'<m$, then there exists a $s'>m'$ in such that $s\in S$.
+	\end{enumerate}
+	Also, suppose that $S$ is bounded below, then the greatest lower bound is called the \textbf{infinum} of $S$, denoted as inf $S$. Iff $k=$ inf $S$, then
+	\begin{enumerate}
+		\item $k\leq s$ for all $s\in S$, and
+		\item if $k'>k$, then there exists a $s'<k'$ such that $s'\in S$.
+	\end{enumerate}
 \end{definition}
 
 
